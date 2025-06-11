@@ -1,0 +1,102 @@
+body {
+	font-size: larger;
+}
+.nav-link {
+	font-size: 1.5em;
+}
+.nav-link:hover {
+	color: #00b7ff;
+}
+.current-link {
+	color: #0077a7;
+	font-weight: bold;
+}
+.navbar li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.card {
+	margin: 0 0 1em 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-width: 2px;
+	border-color: #0066ff;
+	box-sizing: border-box;
+	background-color: #ece9e9;
+	box-shadow: 0 10px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transform: scale(1.02);
+	transition: transform 0.5s, box-shadow 0.2s;
+	color: rgb(2, 103, 255);
+	background-color: #f0f8ff;
+	border-color: #00eeff;
+}
+.card-header {
+	background-color: #f7ecf8;
+}
+
+.card-body {
+	/* flex-grow: 1; */
+	display: flex;
+	flex-direction: column;
+}
+.card-body .btn {
+	margin-top: auto;
+	width: 120px;
+}
+.link-tree .card {
+	border: 2px solid #0077a7;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.link-tree .card-header {
+	background-color: #0077a7;
+	color: white;
+	font-weight: bold;
+}
+
+.link-tree .list-group-item {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.link-tree .list-group-item:hover {
+	background-color: #f0f8ff;
+}
+/* #features-div {
+	height: 20%; */
+
+/* .carousel-item {
+	max-height: 200px;
+	width: auto;
+} */
+.modal-dialog {
+	max-width: 100%; /* Ensures the modal spans the full width */
+	width: 80%; /* Sets the modal width to 100% */
+}
+
+.modal-content {
+	width: 100%; /* Ensures the content inside the modal spans the full width */
+}
+.img-thumbnail {
+	border-width: 3px;
+	border-color: #040024;
+	box-shadow: 0 12px 8px rgba(0, 0, 0, 0.2);
+}
+figcaption {
+	text-align: center;
+	font-style: italic;
+	color: #555;
+	margin-top: 0.5em;
+}
+ol {
+	margin-left: 1.5em;
+}

@@ -393,7 +393,7 @@
 				<div class="col-4">
 					<div class="card">
 						<img
-							src=""
+							src="images/new-features/custom-groups/custom-groups.gif"
 							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
 							alt="Custom Groups" />
 						<div class="card-body">
@@ -434,12 +434,14 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
+			<div class="row g-4">
 				<!-- Equations Card -->
 				<div class="col-4">
 					<div class="card">
 						<img
-							src=""
+							src="images/new-features/equations/equations.jpg"
 							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
 							alt="Equations" />
 						<div class="card-body">
@@ -456,34 +458,11 @@
 					</div>
 				</div>
 
-				<!-- Group Drawing Settings Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Group Drawing Settings" />
-						<div class="card-body">
-							<h5 class="card-title">Group Drawing Settings</h5>
-							<p class="card-text">
-								Opens content from group-drawing-settings-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#groupDrawingSettingsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
 				<!-- Import Materials and Styles Card -->
 				<div class="col-4">
 					<div class="card">
 						<img
-							src=""
+							src="images/new-features/import-materials/import-materials.gif"
 							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
 							alt="Import Materials and Styles" />
 						<div class="card-body">
@@ -524,7 +503,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
+			<div class="row g-4">
 				<!-- Replace Interface ID Card -->
 				<div class="col-4">
 					<div class="card">
@@ -594,7 +575,9 @@
 						</div>
 					</div>
 				</div>
+			</div>
 
+			<div class="row g-4">
 				<!-- Sync Forces Card -->
 				<div class="col-4">
 					<div class="card">
@@ -1019,34 +1002,6 @@
 							class="modal-title"
 							id="equationsModalLabel">
 							Equations
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Group Drawing Settings Modal -->
-		<div
-			class="modal fade"
-			id="groupDrawingSettingsModal"
-			tabindex="-1"
-			aria-labelledby="groupDrawingSettingsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="groupDrawingSettingsModalLabel">
-							Group Drawing Settings
 						</h5>
 						<button
 							type="button"
@@ -1512,28 +1467,6 @@
 								modalBody.innerHTML = "<p>Error loading content.</p>";
 							});
 					});
-				}
-
-				// Handle group drawing settings modal
-				const groupDrawingSettingsModal = document.getElementById(
-					"groupDrawingSettingsModal"
-				);
-				if (groupDrawingSettingsModal) {
-					groupDrawingSettingsModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/group-drawing-settings-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
 				}
 
 				// Handle import materials and styles modal

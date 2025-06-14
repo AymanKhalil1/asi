@@ -41,14 +41,14 @@
 							<ul class="navbar-nav">
 								<li class="nav-item">
 									<a
-										class="nav-link current-link"
+										class="nav-link"
 										href="qsghome.html"
 										>QSG Home</a
 									>
 								</li>
 								<li class="nav-item">
 									<a
-										class="nav-link"
+										class="nav-link current-link"
 										href="new.html"
 										>What's New in ELS V11</a
 									>
@@ -130,7 +130,9 @@
 			<!--offcanvas div end-->
 			<!-- Button to open the offcanvas sidebar -->
 			<button
-				class="btn btn-outline-dark"
+				id="sidebar-toggle-btn"
+				class="btn btn-outline-dark position-fixed bg-white shadow d-flex align-items-center"
+				style="top: 20px; left: 20px; z-index: 2000; border-radius: 8px"
 				type="button"
 				data-bs-toggle="offcanvas"
 				data-bs-target="#offcanvas-navigation"
@@ -141,11 +143,18 @@
 					height="16"
 					fill="currentColor"
 					class="bi bi-list"
-					viewBox="0 0 16 16">
+					viewBox="0 0 16 16"
+					aria-hidden="true"
+					focusable="false">
 					<path
 						fill-rule="evenodd"
 						d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
 				</svg>
+				<span
+					class="ms-2 d-none d-sm-inline"
+					style="font-size: 1em; font-weight: 500"
+					>Quick Start Guide Navigation</span
+				>
 			</button>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
@@ -1693,6 +1702,19 @@
 									});
 							}
 						);
+					}
+
+					// Sidebar toggle button fade in/out on offcanvas show/hide
+					const sidebarToggleBtn =
+						document.getElementById("sidebar-toggle-btn");
+					const offcanvasNav = document.getElementById("offcanvas-navigation");
+					if (sidebarToggleBtn && offcanvasNav) {
+						offcanvasNav.addEventListener("show.bs.offcanvas", function () {
+							sidebarToggleBtn.classList.add("hide-btn");
+						});
+						offcanvasNav.addEventListener("hidden.bs.offcanvas", function () {
+							sidebarToggleBtn.classList.remove("hide-btn");
+						});
 					}
 				});
 			</script>

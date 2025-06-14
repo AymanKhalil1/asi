@@ -151,3 +151,22 @@ h6 {
 .offcanvas .navbar-nav .nav-link {
 	font-size: 0.95em;
 }
+#sidebar-toggle-btn span {
+	color: #0056b3;
+	transition: color 0.2s;
+}
+#sidebar-toggle-btn:hover span {
+	color: #fff;
+}
+#sidebar-toggle-btn:hover {
+	background-color: #0056b3 !important;
+	border-color: #0056b3 !important;
+}
+#sidebar-toggle-btn {
+	transition: opacity 0.2s;
+	opacity: 1;
+}
+#sidebar-toggle-btn.hide-btn {
+	opacity: 0;
+	pointer-events: none;
+}

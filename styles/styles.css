@@ -147,3 +147,7 @@ h6 {
 .modal-footer {
 	font-size: 0.95em;
 }
+.offcanvas .nav-link,
+.offcanvas .navbar-nav .nav-link {
+	font-size: 0.95em;
+}

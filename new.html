@@ -162,10 +162,10 @@
 				<!-- Sticky Vertical Nav for Scrollspy -->
 				<nav
 					class="col-md-3 d-none d-md-block position-sticky"
-					style="top: 80px; height: 100vh; z-index: 1">
+					style="top: 80px; z-index: 2">
 					<ul
-						class="nav flex-column"
-						id="feature-nav">
+						class="nav flex-column nav-pills"
+						id="scrollspyMenu">
 						<li class="nav-item">
 							<a
 								class="nav-link"
@@ -256,9 +256,10 @@
 				<div
 					class="col-md-9"
 					data-bs-spy="scroll"
-					data-bs-target="#feature-nav"
+					data-bs-target="#scrollspy-nav"
 					data-bs-offset="80"
-					tabindex="0">
+					tabindex="0"
+					style="position: relative; height: 80vh; overflow-y: auto">
 					<h1 id="top">What's New in V11?</h1>
 					<p>
 						ELS has seen a host of major changes in its eleventh iteration, as
@@ -272,7 +273,8 @@
 					<!-- Interface Card -->
 					<div
 						id="interface"
-						class="card col-12 mb-4">
+						class="card col-12 mb-4"
+						data-nav="#interface">
 						<img
 							src="images/new-features/ribbon.png"
 							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -300,7 +302,9 @@
 						id="properties-browser"
 						class="row g-4 mb-4">
 						<div class="col">
-							<div class="card">
+							<div
+								class="card"
+								data-nav="#properties-browser">
 								<img
 									src="images/new-features/line-thickness.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -326,7 +330,9 @@
 
 						<!-- Divide with Multiple Planes Card -->
 						<div class="col-lg-6 col-sm-12 col-12">
-							<div class="card">
+							<div
+								class="card"
+								data-nav="#divide-multiple-planes">
 								<img
 									src="images/new-features/divide-with-multiple-planes/divide-with-multiple-planes.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -353,7 +359,9 @@
 						id="copy-groups"
 						class="row g-4 mb-4">
 						<div class="col-4">
-							<div class="card">
+							<div
+								class="card"
+								data-nav="#copy-groups">
 								<img
 									src="images/new-features/copy-groups/demo.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -380,7 +388,9 @@
 						<div
 							id="boundary-conditions"
 							class="col-8">
-							<div class="card">
+							<div
+								class="card"
+								data-nav="#boundary-conditions">
 								<img
 									src="images/new-features/boundary-conditions/boundary-conditions-demo.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -408,7 +418,9 @@
 						id="append-elements"
 						class="row g-4 mb-4">
 						<div class="col-12">
-							<div class="card">
+							<div
+								class="card"
+								data-nav="#append-elements">
 								<img
 									src="images/new-features/append-elements/append-elements-demo.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -436,7 +448,9 @@
 						<div
 							id="anisotropic-materials"
 							class="col-6">
-							<div class="card h-100">
+							<div
+								class="card h-100"
+								data-nav="#anisotropic-materials">
 								<img
 									src="images/new-features/anisotropic-materials/anisotropic-materials.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -460,7 +474,9 @@
 						<div
 							id="create-link-member"
 							class="col-6">
-							<div class="card h-100">
+							<div
+								class="card h-100"
+								data-nav="#create-link-member">
 								<img
 									src="images/new-features/create-link-member/create-link-member.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -487,7 +503,9 @@
 						<div
 							id="equations"
 							class="col-4">
-							<div class="card h-100">
+							<div
+								class="card h-100"
+								data-nav="#equations">
 								<img
 									src="images/new-features/equations/equations.jpg"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -512,7 +530,9 @@
 						<div
 							id="import-materials"
 							class="col-4">
-							<div class="card h-100">
+							<div
+								class="card h-100"
+								data-nav="#import-materials">
 								<img
 									src="images/new-features/import-materials/import-materials.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -537,7 +557,9 @@
 						<div
 							id="replace-interface-id"
 							class="col-4">
-							<div class="card h-100">
+							<div
+								class="card h-100"
+								data-nav="#replace-interface-id">
 								<img
 									src="images/new-features/replace-interface-id/illustration.gif"
 									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
@@ -565,7 +587,9 @@
 						id="other-utilities"
 						class="row g-4 mb-4">
 						<div class="col-12">
-							<div class="card">
+							<div
+								class="card"
+								data-nav="#other-utilities">
 								<div class="card-body">
 									<h5 class="card-title">Other Utilities & Features</h5>
 									<ul>
@@ -1671,6 +1695,36 @@
 						);
 					}
 				});
+			</script>
+			<!-- Highlight nav link on card hover -->
+			<script>
+				// Highlight nav link on card hover
+				(function () {
+					document.querySelectorAll(".card[data-nav]").forEach(function (card) {
+						card.addEventListener("mouseenter", function () {
+							// Remove .nav-link-hover from all nav links
+							document
+								.querySelectorAll("#scrollspyMenu .nav-link")
+								.forEach(function (link) {
+									link.classList.remove("nav-link-hover");
+								});
+							// Add .nav-link-hover to the corresponding nav link
+							var navSelector = this.getAttribute("data-nav");
+							var navLink = document.querySelector(
+								'#scrollspyMenu .nav-link[href="' + navSelector + '"]'
+							);
+							if (navLink) navLink.classList.add("nav-link-hover");
+						});
+						card.addEventListener("mouseleave", function () {
+							// Remove .nav-link-hover from all nav links
+							document
+								.querySelectorAll("#scrollspyMenu .nav-link")
+								.forEach(function (link) {
+									link.classList.remove("nav-link-hover");
+								});
+						});
+					});
+				})();
 			</script>
 		</div>
 	</body>

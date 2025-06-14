@@ -157,1455 +157,1316 @@
 					</li>
 				</ol>
 			</nav>
-			<h1>What's New in V11?</h1>
-			<p>
-				ELS has seen a host of major changes in its eleventh iteration, as well
-				as a multitude of improvements in user experience and enhancements of
-				existing features. In this section, intended for users of previous
-				versions of ELS, we list some of the most significant changes and where
-				to reach them.
-			</p>
-			<!-- Cards Section -->
 
-			<!-- Interface Card -->
-			<div class="card col-12">
-				<img
-					src="images/new-features/ribbon.png"
-					class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-					alt="A static image of the new ELS Ribbon" />
-				<div class="card-body">
-					<h5 class="card-title">Interface</h5>
-					<p class="card-text">
-						The ELS interface has been completely redesigned to provide a more
-						intuitive and user-friendly experience. The new interface features a
-						modern look and feel, with improved navigation, and modeling and
-						viewing quick access tools.
+			<div class="row">
+				<!-- Sticky Vertical Nav for Scrollspy -->
+				<nav
+					class="col-md-3 d-none d-md-block position-sticky"
+					style="top: 80px; height: 100vh; z-index: 1">
+					<ul
+						class="nav flex-column"
+						id="feature-nav">
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#interface"
+								>Interface</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#properties-browser"
+								>Properties Browser</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#divide-multiple-planes"
+								>Divide with Multiple Planes</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#copy-groups"
+								>Copy Groups</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#boundary-conditions"
+								>Boundary Conditions</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#append-elements"
+								>Append Elements</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#anisotropic-materials"
+								>Anisotropic Materials</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#create-link-member"
+								>Create Link Member</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#equations"
+								>Equations</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#import-materials"
+								>Import Materials & Styles</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#replace-interface-id"
+								>Replace Interface ID</a
+							>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link"
+								href="#other-utilities"
+								>Other Utilities & Features</a
+							>
+						</li>
+					</ul>
+				</nav>
+				<!-- Main Content with Scrollspy -->
+				<div
+					class="col-md-9"
+					data-bs-spy="scroll"
+					data-bs-target="#feature-nav"
+					data-bs-offset="80"
+					tabindex="0">
+					<h1 id="top">What's New in V11?</h1>
+					<p>
+						ELS has seen a host of major changes in its eleventh iteration, as
+						well as a multitude of improvements in user experience and
+						enhancements of existing features. In this section, intended for
+						users of previous versions of ELS, we list some of the most
+						significant changes and where to reach them.
 					</p>
-					<a
-						href="#"
-						class="btn btn-primary"
-						data-bs-toggle="modal"
-						data-bs-target="#interfaceModal"
-						>Learn More</a
-					>
-				</div>
-			</div>
+					<!-- Cards Section -->
 
-			<!-- Properties Browser Card -->
-			<div class="row g-4">
-				<div class="col">
-					<div class="card">
+					<!-- Interface Card -->
+					<div
+						id="interface"
+						class="card col-12 mb-4">
 						<img
-							src="images/new-features/line-thickness.gif"
+							src="images/new-features/ribbon.png"
 							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Demo of line thickness and stipple" />
+							alt="A static image of the new ELS Ribbon" />
 						<div class="card-body">
-							<h5 class="card-title">Properties Browser: New Properties</h5>
+							<h5 class="card-title">Interface</h5>
 							<p class="card-text">
-								New properties have been added to the Properties browser for
-								line thickness when a draft, structural object, RFT, or element
-								is selected. Another option for line stipple has been added for
-								drafts.
+								The ELS interface has been completely redesigned to provide a
+								more intuitive and user-friendly experience. The new interface
+								features a modern look and feel, with improved navigation, and
+								modeling and viewing quick access tools.
 							</p>
 							<a
 								href="#"
 								class="btn btn-primary"
 								data-bs-toggle="modal"
-								data-bs-target="#secondModal"
+								data-bs-target="#interfaceModal"
 								>Learn More</a
 							>
 						</div>
 					</div>
-				</div>
 
-				<!-- Divide with Multiple Planes Card -->
-				<div class="col-lg-6 col-sm-12 col-12">
-					<div class="card">
-						<img
-							src="images/new-features/divide-with-multiple-planes/divide-with-multiple-planes.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Demo of dividing a column" />
-						<div class="card-body">
-							<h5 class="card-title">Divide with Multiple Planes</h5>
-							<p class="card-text">
-								Users can now divide a column with multiple planes, allowing for
-								more complex structural modeling.
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#divideModal"
-								>Learn More</a
-							>
+					<!-- Properties Browser Card -->
+					<div
+						id="properties-browser"
+						class="row g-4 mb-4">
+						<div class="col">
+							<div class="card">
+								<img
+									src="images/new-features/line-thickness.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Demo of line thickness and stipple" />
+								<div class="card-body">
+									<h5 class="card-title">Properties Browser: New Properties</h5>
+									<p class="card-text">
+										New properties have been added to the Properties browser for
+										line thickness when a draft, structural object, RFT, or
+										element is selected. Another option for line stipple has
+										been added for drafts.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#secondModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+
+						<!-- Divide with Multiple Planes Card -->
+						<div class="col-lg-6 col-sm-12 col-12">
+							<div class="card">
+								<img
+									src="images/new-features/divide-with-multiple-planes/divide-with-multiple-planes.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Demo of dividing a column" />
+								<div class="card-body">
+									<h5 class="card-title">Divide with Multiple Planes</h5>
+									<p class="card-text">
+										Users can now divide a column with multiple planes, allowing
+										for more complex structural modeling.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#divideModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Copy Groups Card -->
+					<div
+						id="copy-groups"
+						class="row g-4 mb-4">
+						<div class="col-4">
+							<div class="card">
+								<img
+									src="images/new-features/copy-groups/demo.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Demo of copy groups feature" />
+								<div class="card-body">
+									<h5 class="card-title">Streamlined Modeling: Copy Groups</h5>
+									<p class="card-text">
+										Simply copy groups between Preprocessing actions, boundary
+										conditions, and loading scenarios, eliminating the need to
+										reselect elements in preprocessing groups that apply to the
+										same elements.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#copyGroupsModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+						<!-- Boundary Conditions Card -->
+						<div
+							id="boundary-conditions"
+							class="col-8">
+							<div class="card">
+								<img
+									src="images/new-features/boundary-conditions/boundary-conditions-demo.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="A demonstration of assigning boundary conditions to multiple stages" />
+								<div class="card-body">
+									<h5 class="card-title">Boundary Conditions Across Stages</h5>
+									<p class="card-text">
+										Pick the stages you apply boundary conditions to, including
+										all degree of freedom restraint data. Define once, apply to
+										multiple stages.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#boundaryConditionsModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Append Elements Card -->
+					<div
+						id="append-elements"
+						class="row g-4 mb-4">
+						<div class="col-12">
+							<div class="card">
+								<img
+									src="images/new-features/append-elements/append-elements-demo.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Demonstration of appending elements feature" />
+								<div class="card-body">
+									<h5 class="card-title">Append Elements</h5>
+									<p class="card-text">
+										New functionality allows appending elements to existing
+										groups, enabling more flexible modeling and modification of
+										existing structures.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#appendElementsModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row g-4 mb-4">
+						<div
+							id="anisotropic-materials"
+							class="col-6">
+							<div class="card h-100">
+								<img
+									src="images/new-features/anisotropic-materials/anisotropic-materials.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Anisotropic Materials" />
+								<div class="card-body">
+									<h5 class="card-title">Anisotropic Materials</h5>
+									<p class="card-text">
+										New preprocessing feature to create anisotropic materials
+										with different material properties in different directions.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#anisotropicMaterialsModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+						<div
+							id="create-link-member"
+							class="col-6">
+							<div class="card h-100">
+								<img
+									src="images/new-features/create-link-member/create-link-member.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Create Link Member" />
+								<div class="card-body">
+									<h5 class="card-title">Create Link Member</h5>
+									<p class="card-text">
+										Easily create a link member between two selected elements of
+										different components.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#createLinkMemberModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row g-4 mb-4">
+						<div
+							id="equations"
+							class="col-4">
+							<div class="card h-100">
+								<img
+									src="images/new-features/equations/equations.jpg"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Equations" />
+								<div class="card-body">
+									<h5 class="card-title">Equations</h5>
+									<p class="card-text">
+										Opens content from equations-modal.html
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#equationsModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+
+						<!-- Import Materials and Styles Card -->
+						<div
+							id="import-materials"
+							class="col-4">
+							<div class="card h-100">
+								<img
+									src="images/new-features/import-materials/import-materials.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Import Materials and Styles" />
+								<div class="card-body">
+									<h5 class="card-title">Import Materials and Styles</h5>
+									<p class="card-text">
+										Opens content from import-materials-and-styles-modal.html
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#importMaterialsStylesModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+
+						<!-- Replace Interface ID Card -->
+						<div
+							id="replace-interface-id"
+							class="col-4">
+							<div class="card h-100">
+								<img
+									src="images/new-features/replace-interface-id/illustration.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Replace Interface ID" />
+								<div class="card-body">
+									<h5 class="card-title">
+										Spring Utilities: Replace Interface ID
+									</h5>
+									<p class="card-text">
+										Opens content from replace-interface-id-modal.html
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										data-bs-toggle="modal"
+										data-bs-target="#replaceInterfaceIdModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div
+						id="other-utilities"
+						class="row g-4 mb-4">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Other Utilities & Features</h5>
+									<ul>
+										<li>
+											<strong>Create Region on Segments:</strong> Opens content
+											from create-region-on-segments-modal.html
+										</li>
+										<li>
+											<strong>Dowel Action:</strong> Opens content from
+											dowel-action-modal.html
+										</li>
+										<li>
+											<strong>Object Local Axes:</strong> Opens content from
+											object-local-axes-modal.html
+										</li>
+										<li>
+											<strong>Replace Spring Material:</strong> Opens content
+											from replace-spring-material-by-location-modal.html
+										</li>
+										<li>
+											<strong>Style Collection Properties:</strong> Opens
+											content from style-collection-properties-modal.html
+										</li>
+										<li>
+											<strong>Sync Forces:</strong> Opens content from
+											sync-forces-modal.html
+										</li>
+										<li>
+											<strong>Velocity Vector Scale:</strong> Opens content from
+											velocity-vector-scale-modal.html
+										</li>
+										<li>
+											<strong>Wall Stirrup Extensions:</strong> Opens content
+											from wall-stirrup-extensions-modal.html
+										</li>
+									</ul>
+									<a
+										href="#"
+										class="btn btn-primary mt-3"
+										data-bs-toggle="modal"
+										data-bs-target="#otherUtilitiesModal"
+										>Learn More</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Modals Section -->
+					<!-- Interface Modal -->
+					<div
+						class="modal fade col-12"
+						id="interfaceModal"
+						tabindex="-1"
+						aria-labelledby="interfaceModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3
+										class="modal-title"
+										id="interfaceModalLabel">
+										Interface Overhaul
+									</h3>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Close
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Properties Browser Modal -->
+					<div
+						class="modal fade col-12"
+						id="secondModal"
+						tabindex="-1"
+						aria-labelledby="propertiesbrowserModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3
+										class="modal-title"
+										id="secondModalLabel">
+										Properties Browser: New Properties
+									</h3>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Close
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Divide with Multiple Planes Modal -->
+					<div
+						class="modal fade col-12"
+						id="divideModal"
+						tabindex="-1"
+						aria-labelledby="divideModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3
+										class="modal-title"
+										id="divideModalLabel">
+										Divide with Multiple Planes
+									</h3>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Close
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Copy Groups Modal -->
+					<div
+						class="modal fade col-12"
+						id="copyGroupsModal"
+						tabindex="-1"
+						aria-labelledby="copyGroupsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3
+										class="modal-title"
+										id="copyGroupsModalLabel">
+										Copy Groups
+									</h3>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Close
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Boundary Conditions Modal -->
+					<div
+						class="modal fade"
+						id="boundaryConditionsModal"
+						tabindex="-1"
+						aria-labelledby="boundaryConditionsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-xl">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="boundaryConditionsModalLabel">
+										Boundary Conditions Across Stages
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Append Elements Modal -->
+					<div
+						class="modal fade"
+						id="appendElementsModal"
+						tabindex="-1"
+						aria-labelledby="appendElementsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="appendElementsModalLabel">
+										Append Elements
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Anisotropic Materials Modal -->
+					<div
+						class="modal fade"
+						id="anisotropicMaterialsModal"
+						tabindex="-1"
+						aria-labelledby="anisotropicMaterialsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="anisotropicMaterialsModalLabel">
+										Anisotropic Materials
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Create Link Member Modal -->
+					<div
+						class="modal fade"
+						id="createLinkMemberModal"
+						tabindex="-1"
+						aria-labelledby="createLinkMemberModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="createLinkMemberModalLabel">
+										Create Link Member
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Create Region on Segments Modal -->
+					<div
+						class="modal fade"
+						id="createRegionOnSegmentsModal"
+						tabindex="-1"
+						aria-labelledby="createRegionOnSegmentsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="createRegionOnSegmentsModalLabel">
+										Create Region on Segments
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Custom Groups Modal -->
+					<div
+						class="modal fade"
+						id="customGroupsModal"
+						tabindex="-1"
+						aria-labelledby="customGroupsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="customGroupsModalLabel">
+										Custom Groups
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Dowel Action Modal -->
+					<div
+						class="modal fade"
+						id="dowelActionModal"
+						tabindex="-1"
+						aria-labelledby="dowelActionModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="dowelActionModalLabel">
+										Dowel Action
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Equations Modal -->
+					<div
+						class="modal fade"
+						id="equationsModal"
+						tabindex="-1"
+						aria-labelledby="equationsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="equationsModalLabel">
+										Equations
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Import Materials and Styles Modal -->
+					<div
+						class="modal fade"
+						id="importMaterialsStylesModal"
+						tabindex="-1"
+						aria-labelledby="importMaterialsStylesModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="importMaterialsStylesModalLabel">
+										Import Materials and Styles
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Object Local Axes Modal -->
+					<div
+						class="modal fade"
+						id="objectLocalAxesModal"
+						tabindex="-1"
+						aria-labelledby="objectLocalAxesModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="objectLocalAxesModalLabel">
+										Object Local Axes
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Replace Interface ID Modal -->
+					<div
+						class="modal fade"
+						id="replaceInterfaceIdModal"
+						tabindex="-1"
+						aria-labelledby="replaceInterfaceIdModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="replaceInterfaceIdModalLabel">
+										Replace Interface ID
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Replace Spring Material Modal -->
+					<div
+						class="modal fade"
+						id="replaceSpringMaterialModal"
+						tabindex="-1"
+						aria-labelledby="replaceSpringMaterialModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="replaceSpringMaterialModalLabel">
+										Replace Spring Material
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Style Collection Properties Modal -->
+					<div
+						class="modal fade"
+						id="styleCollectionPropertiesModal"
+						tabindex="-1"
+						aria-labelledby="styleCollectionPropertiesModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="styleCollectionPropertiesModalLabel">
+										Style Collection Properties
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Sync Forces Modal -->
+					<div
+						class="modal fade"
+						id="syncForcesModal"
+						tabindex="-1"
+						aria-labelledby="syncForcesModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="syncForcesModalLabel">
+										Sync Forces
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Velocity Vector Scale Modal -->
+					<div
+						class="modal fade"
+						id="velocityVectorScaleModal"
+						tabindex="-1"
+						aria-labelledby="velocityVectorScaleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="velocityVectorScaleModalLabel">
+										Velocity Vector Scale
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Wall Stirrup Extensions Modal -->
+					<div
+						class="modal fade"
+						id="wallStirrupExtensionsModal"
+						tabindex="-1"
+						aria-labelledby="wallStirrupExtensionsModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="wallStirrupExtensionsModalLabel">
+										Wall Stirrup Extensions
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Other Utilities & Features Modal -->
+					<div
+						class="modal fade"
+						id="otherUtilitiesModal"
+						tabindex="-1"
+						aria-labelledby="otherUtilitiesModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5
+										class="modal-title"
+										id="otherUtilitiesModalLabel">
+										Other Utilities & Features
+									</h5>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+									<!-- Content will be loaded dynamically -->
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!-- Copy Groups Card -->
-			<div class="row g-4">
-				<div class="col-4">
-					<div class="card">
-						<img
-							src="images/new-features/copy-groups/demo.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Demo of copy groups feature" />
-						<div class="card-body">
-							<h5 class="card-title">Streamlined Modeling: Copy Groups</h5>
-							<p class="card-text">
-								Simply copy groups between Preprocessing actions, boundary
-								conditions, and loading scenarios, eliminating the need to
-								reselect elements in preprocessing groups that apply to the same
-								elements.
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#copyGroupsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-				<!-- Boundary Conditions Card -->
-				<div class="col-8">
-					<div class="card">
-						<img
-							src="images/new-features/boundary-conditions/boundary-conditions-demo.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="A demonstration of assigning boundary conditions to multiple stages" />
-						<div class="card-body">
-							<h5 class="card-title">Boundary Conditions Across Stages</h5>
-							<p class="card-text">
-								Pick the stages you apply boundary conditions to, including all
-								degree of freedom restraint data. Define once, apply to multiple
-								stages.
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#boundaryConditionsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Append Elements Card -->
-			<div class="row g-4">
-				<div class="col-12">
-					<div class="card">
-						<img
-							src="images/new-features/append-elements/append-elements-demo.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Demonstration of appending elements feature" />
-						<div class="card-body">
-							<h5 class="card-title">Append Elements</h5>
-							<p class="card-text">
-								New functionality allows appending elements to existing groups,
-								enabling more flexible modeling and modification of existing
-								structures.
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#appendElementsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
 
-			<div class="row g-4">
-				<div class="col-3">
-					<div class="card h-100">
-						<img
-							src="images/new-features/anisotropic-materials/anisotropic-materials.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Anisotropic Materials" />
-						<div class="card-body">
-							<h5 class="card-title">Anisotropic Materials</h5>
-							<p class="card-text">
-								New preprocessing feature to create anisotropic materials with
-								different material properties in different directions.
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#anisotropicMaterialsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-				<div class="col-6">
-					<div class="card h-100">
-						<img
-							src="images/new-features/create-link-member/create-link-member.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Create Link Member" />
-						<div class="card-body">
-							<h5 class="card-title">Create Link Member</h5>
-							<p class="card-text">
-								Easily create a link member between two selected elements of
-								different components.
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#createLinkMemberModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Create Region on Segments Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Create Region on Segments" />
-						<div class="card-body">
-							<h5 class="card-title">Create Region on Segments</h5>
-							<p class="card-text">
-								Opens content from create-region-on-segments-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#createRegionOnSegmentsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Custom Groups Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src="images/new-features/custom-groups/custom-groups.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Custom Groups" />
-						<div class="card-body">
-							<h5 class="card-title">Custom Groups</h5>
-							<p class="card-text">
-								Opens content from custom-groups-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#customGroupsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Dowel Action Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Dowel Action" />
-						<div class="card-body">
-							<h5 class="card-title">Dowel Action</h5>
-							<p class="card-text">
-								Opens content from dowel-action-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#dowelActionModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row g-4">
-				<!-- Equations Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src="images/new-features/equations/equations.jpg"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Equations" />
-						<div class="card-body">
-							<h5 class="card-title">Equations</h5>
-							<p class="card-text">Opens content from equations-modal.html</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#equationsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Import Materials and Styles Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src="images/new-features/import-materials/import-materials.gif"
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Import Materials and Styles" />
-						<div class="card-body">
-							<h5 class="card-title">Import Materials and Styles</h5>
-							<p class="card-text">
-								Opens content from import-materials-and-styles-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#importMaterialsStylesModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Object Local Axes Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Object Local Axes" />
-						<div class="card-body">
-							<h5 class="card-title">Object Local Axes</h5>
-							<p class="card-text">
-								Opens content from object-local-axes-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#objectLocalAxesModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row g-4">
-				<!-- Replace Interface ID Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Replace Interface ID" />
-						<div class="card-body">
-							<h5 class="card-title">Replace Interface ID</h5>
-							<p class="card-text">
-								Opens content from replace-interface-id-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#replaceInterfaceIdModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Replace Spring Material Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Replace Spring Material" />
-						<div class="card-body">
-							<h5 class="card-title">Replace Spring Material</h5>
-							<p class="card-text">
-								Opens content from
-								replace-spring-material-by-location-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#replaceSpringMaterialModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Style Collection Properties Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Style Collection Properties" />
-						<div class="card-body">
-							<h5 class="card-title">Style Collection Properties</h5>
-							<p class="card-text">
-								Opens content from style-collection-properties-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#styleCollectionPropertiesModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="row g-4">
-				<!-- Sync Forces Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Sync Forces" />
-						<div class="card-body">
-							<h5 class="card-title">Sync Forces</h5>
-							<p class="card-text">Opens content from sync-forces-modal.html</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#syncForcesModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Velocity Vector Scale Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Velocity Vector Scale" />
-						<div class="card-body">
-							<h5 class="card-title">Velocity Vector Scale</h5>
-							<p class="card-text">
-								Opens content from velocity-vector-scale-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#velocityVectorScaleModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-
-				<!-- Wall Stirrup Extensions Card -->
-				<div class="col-4">
-					<div class="card">
-						<img
-							src=""
-							class="card-img-top img-fluid img-thumbnail mx-auto d-block"
-							alt="Wall Stirrup Extensions" />
-						<div class="card-body">
-							<h5 class="card-title">Wall Stirrup Extensions</h5>
-							<p class="card-text">
-								Opens content from wall-stirrup-extensions-modal.html
-							</p>
-							<a
-								href="#"
-								class="btn btn-primary"
-								data-bs-toggle="modal"
-								data-bs-target="#wallStirrupExtensionsModal"
-								>Learn More</a
-							>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Modals Section -->
-		<!-- Interface Modal -->
-		<div
-			class="modal fade col-12"
-			id="interfaceModal"
-			tabindex="-1"
-			aria-labelledby="interfaceModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3
-							class="modal-title"
-							id="interfaceModalLabel">
-							Interface Overhaul
-						</h3>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-					<div class="modal-footer">
-						<button
-							type="button"
-							class="btn btn-secondary"
-							data-bs-dismiss="modal">
-							Close
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Properties Browser Modal -->
-		<div
-			class="modal fade col-12"
-			id="secondModal"
-			tabindex="-1"
-			aria-labelledby="propertiesbrowserModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3
-							class="modal-title"
-							id="secondModalLabel">
-							Properties Browser: New Properties
-						</h3>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-					<div class="modal-footer">
-						<button
-							type="button"
-							class="btn btn-secondary"
-							data-bs-dismiss="modal">
-							Close
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Divide with Multiple Planes Modal -->
-		<div
-			class="modal fade col-12"
-			id="divideModal"
-			tabindex="-1"
-			aria-labelledby="divideModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3
-							class="modal-title"
-							id="divideModalLabel">
-							Divide with Multiple Planes
-						</h3>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-					<div class="modal-footer">
-						<button
-							type="button"
-							class="btn btn-secondary"
-							data-bs-dismiss="modal">
-							Close
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Copy Groups Modal -->
-		<div
-			class="modal fade col-12"
-			id="copyGroupsModal"
-			tabindex="-1"
-			aria-labelledby="copyGroupsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h3
-							class="modal-title"
-							id="copyGroupsModalLabel">
-							Copy Groups
-						</h3>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-					<div class="modal-footer">
-						<button
-							type="button"
-							class="btn btn-secondary"
-							data-bs-dismiss="modal">
-							Close
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Boundary Conditions Modal -->
-		<div
-			class="modal fade"
-			id="boundaryConditionsModal"
-			tabindex="-1"
-			aria-labelledby="boundaryConditionsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-xl">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="boundaryConditionsModalLabel">
-							Boundary Conditions Across Stages
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Append Elements Modal -->
-		<div
-			class="modal fade"
-			id="appendElementsModal"
-			tabindex="-1"
-			aria-labelledby="appendElementsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="appendElementsModalLabel">
-							Append Elements
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Anisotropic Materials Modal -->
-		<div
-			class="modal fade"
-			id="anisotropicMaterialsModal"
-			tabindex="-1"
-			aria-labelledby="anisotropicMaterialsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="anisotropicMaterialsModalLabel">
-							Anisotropic Materials
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Create Link Member Modal -->
-		<div
-			class="modal fade"
-			id="createLinkMemberModal"
-			tabindex="-1"
-			aria-labelledby="createLinkMemberModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="createLinkMemberModalLabel">
-							Create Link Member
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Create Region on Segments Modal -->
-		<div
-			class="modal fade"
-			id="createRegionOnSegmentsModal"
-			tabindex="-1"
-			aria-labelledby="createRegionOnSegmentsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="createRegionOnSegmentsModalLabel">
-							Create Region on Segments
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Custom Groups Modal -->
-		<div
-			class="modal fade"
-			id="customGroupsModal"
-			tabindex="-1"
-			aria-labelledby="customGroupsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="customGroupsModalLabel">
-							Custom Groups
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Dowel Action Modal -->
-		<div
-			class="modal fade"
-			id="dowelActionModal"
-			tabindex="-1"
-			aria-labelledby="dowelActionModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="dowelActionModalLabel">
-							Dowel Action
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Equations Modal -->
-		<div
-			class="modal fade"
-			id="equationsModal"
-			tabindex="-1"
-			aria-labelledby="equationsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="equationsModalLabel">
-							Equations
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Import Materials and Styles Modal -->
-		<div
-			class="modal fade"
-			id="importMaterialsStylesModal"
-			tabindex="-1"
-			aria-labelledby="importMaterialsStylesModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="importMaterialsStylesModalLabel">
-							Import Materials and Styles
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Object Local Axes Modal -->
-		<div
-			class="modal fade"
-			id="objectLocalAxesModal"
-			tabindex="-1"
-			aria-labelledby="objectLocalAxesModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="objectLocalAxesModalLabel">
-							Object Local Axes
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Replace Interface ID Modal -->
-		<div
-			class="modal fade"
-			id="replaceInterfaceIdModal"
-			tabindex="-1"
-			aria-labelledby="replaceInterfaceIdModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="replaceInterfaceIdModalLabel">
-							Replace Interface ID
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Replace Spring Material Modal -->
-		<div
-			class="modal fade"
-			id="replaceSpringMaterialModal"
-			tabindex="-1"
-			aria-labelledby="replaceSpringMaterialModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="replaceSpringMaterialModalLabel">
-							Replace Spring Material
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Style Collection Properties Modal -->
-		<div
-			class="modal fade"
-			id="styleCollectionPropertiesModal"
-			tabindex="-1"
-			aria-labelledby="styleCollectionPropertiesModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="styleCollectionPropertiesModalLabel">
-							Style Collection Properties
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Sync Forces Modal -->
-		<div
-			class="modal fade"
-			id="syncForcesModal"
-			tabindex="-1"
-			aria-labelledby="syncForcesModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="syncForcesModalLabel">
-							Sync Forces
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Velocity Vector Scale Modal -->
-		<div
-			class="modal fade"
-			id="velocityVectorScaleModal"
-			tabindex="-1"
-			aria-labelledby="velocityVectorScaleModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="velocityVectorScaleModalLabel">
-							Velocity Vector Scale
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Wall Stirrup Extensions Modal -->
-		<div
-			class="modal fade"
-			id="wallStirrupExtensionsModal"
-			tabindex="-1"
-			aria-labelledby="wallStirrupExtensionsModalLabel"
-			aria-hidden="true">
-			<div class="modal-dialog modal-lg">
-				<div class="modal-content">
-					<div class="modal-header">
-						<h5
-							class="modal-title"
-							id="wallStirrupExtensionsModalLabel">
-							Wall Stirrup Extensions
-						</h5>
-						<button
-							type="button"
-							class="btn-close"
-							data-bs-dismiss="modal"
-							aria-label="Close"></button>
-					</div>
-					<div class="modal-body">
-						<!-- Content will be loaded dynamically -->
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Scripts Section -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function () {
-				// Handle interface modal
-				const interfaceButton = document.querySelector(
-					'[data-bs-target="#interfaceModal"]'
-				);
-				interfaceButton.addEventListener("click", function () {
-					fetch("modals/interface-modal.html")
-						.then((response) => response.text())
-						.then((html) => {
-							document.querySelector("#interfaceModal .modal-body").innerHTML =
-								html;
-						})
-						.catch((error) => {
-							console.error("Error loading interface modal content:", error);
-						});
-				});
-
-				// Handle properties browser modal
-				const propertiesButton = document.querySelector(
-					'[data-bs-target="#secondModal"]'
-				);
-				propertiesButton.addEventListener("click", function () {
-					fetch("modals/properties-browser-modal.html")
-						.then((response) => response.text())
-						.then((html) => {
-							document.querySelector("#secondModal .modal-body").innerHTML =
-								html;
-						})
-						.catch((error) => {
-							console.error(
-								"Error loading properties browser modal content:",
-								error
-							);
-						});
-				});
-
-				// Handle divide with multiple planes modal
-				const divideButton = document.querySelector(
-					'[data-bs-target="#divideModal"]'
-				);
-				divideButton.addEventListener("click", function () {
-					fetch("modals/divide-with-multiple-planes-modal.html")
-						.then((response) => response.text())
-						.then((html) => {
-							document.querySelector("#divideModal .modal-body").innerHTML =
-								html;
-						})
-						.catch((error) => {
-							console.error("Error loading divide modal content:", error);
-						});
-				});
-
-				// Handle copy groups modal
-				const copyGroupsButton = document.querySelector(
-					'[data-bs-target="#copyGroupsModal"]'
-				);
-				copyGroupsButton.addEventListener("click", function () {
-					fetch("modals/copy-groups-modal.html")
-						.then((response) => response.text())
-						.then((html) => {
-							document.querySelector("#copyGroupsModal .modal-body").innerHTML =
-								html;
-						})
-						.catch((error) => {
-							console.error("Error loading copy groups modal content:", error);
-						});
-				});
-
-				// Load Boundary Conditions Modal Content
-				const boundaryConditionsModal = document.getElementById(
-					"boundaryConditionsModal"
-				);
-				if (boundaryConditionsModal) {
-					boundaryConditionsModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/boundary-conditons-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
+			<!-- Scripts Section -->
+			<script>
+				document.addEventListener("DOMContentLoaded", function () {
+					// Handle interface modal
+					const interfaceButton = document.querySelector(
+						'[data-bs-target="#interfaceModal"]'
 					);
-				}
-
-				// Handle append elements modal
-				const appendElementsButton = document.querySelector(
-					'[data-bs-target="#appendElementsModal"]'
-				);
-				appendElementsButton.addEventListener("click", function () {
-					fetch("modals/append-elements-modal.html")
-						.then((response) => response.text())
-						.then((html) => {
-							document.querySelector(
-								"#appendElementsModal .modal-body"
-							).innerHTML = html;
-						})
-						.catch((error) => {
-							console.error(
-								"Error loading append elements modal content:",
-								error
-							);
-						});
-				});
-
-				// Handle anisotropic materials modal
-				const anisotropicMaterialsModal = document.getElementById(
-					"anisotropicMaterialsModal"
-				);
-				if (anisotropicMaterialsModal) {
-					anisotropicMaterialsModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/anisotropic-materials-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
-				}
-
-				// Handle create link member modal
-				const createLinkMemberModal = document.getElementById(
-					"createLinkMemberModal"
-				);
-				if (createLinkMemberModal) {
-					createLinkMemberModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/create-link-member-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
-				}
-
-				// Handle create region on segments modal
-				const createRegionOnSegmentsModal = document.getElementById(
-					"createRegionOnSegmentsModal"
-				);
-				if (createRegionOnSegmentsModal) {
-					createRegionOnSegmentsModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/create-region-on-segments-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
-				}
-
-				// Handle custom groups modal
-				const customGroupsModal = document.getElementById("customGroupsModal");
-				if (customGroupsModal) {
-					customGroupsModal.addEventListener("show.bs.modal", function (event) {
-						const modalBody = this.querySelector(".modal-body");
-						fetch("modals/custom-groups-modal.html")
+					interfaceButton.addEventListener("click", function () {
+						fetch("modals/interface-modal.html")
 							.then((response) => response.text())
-							.then((data) => {
-								modalBody.innerHTML = data;
+							.then((html) => {
+								document.querySelector(
+									"#interfaceModal .modal-body"
+								).innerHTML = html;
 							})
 							.catch((error) => {
-								console.error("Error loading modal content:", error);
-								modalBody.innerHTML = "<p>Error loading content.</p>";
+								console.error("Error loading interface modal content:", error);
 							});
 					});
-				}
 
-				// Handle dowel action modal
-				const dowelActionModal = document.getElementById("dowelActionModal");
-				if (dowelActionModal) {
-					dowelActionModal.addEventListener("show.bs.modal", function (event) {
-						const modalBody = this.querySelector(".modal-body");
-						fetch("modals/dowel-action-modal.html")
+					// Handle properties browser modal
+					const propertiesButton = document.querySelector(
+						'[data-bs-target="#secondModal"]'
+					);
+					propertiesButton.addEventListener("click", function () {
+						fetch("modals/properties-browser-modal.html")
 							.then((response) => response.text())
-							.then((data) => {
-								modalBody.innerHTML = data;
+							.then((html) => {
+								document.querySelector("#secondModal .modal-body").innerHTML =
+									html;
 							})
 							.catch((error) => {
-								console.error("Error loading modal content:", error);
-								modalBody.innerHTML = "<p>Error loading content.</p>";
+								console.error(
+									"Error loading properties browser modal content:",
+									error
+								);
 							});
 					});
-				}
 
-				// Handle equations modal
-				const equationsModal = document.getElementById("equationsModal");
-				if (equationsModal) {
-					equationsModal.addEventListener("show.bs.modal", function (event) {
-						const modalBody = this.querySelector(".modal-body");
-						fetch("modals/equations-modal.html")
+					// Handle divide with multiple planes modal
+					const divideButton = document.querySelector(
+						'[data-bs-target="#divideModal"]'
+					);
+					divideButton.addEventListener("click", function () {
+						fetch("modals/divide-with-multiple-planes-modal.html")
 							.then((response) => response.text())
-							.then((data) => {
-								modalBody.innerHTML = data;
+							.then((html) => {
+								document.querySelector("#divideModal .modal-body").innerHTML =
+									html;
 							})
 							.catch((error) => {
-								console.error("Error loading modal content:", error);
-								modalBody.innerHTML = "<p>Error loading content.</p>";
+								console.error("Error loading divide modal content:", error);
 							});
 					});
-				}
 
-				// Handle import materials and styles modal
-				const importMaterialsStylesModal = document.getElementById(
-					"importMaterialsStylesModal"
-				);
-				if (importMaterialsStylesModal) {
-					importMaterialsStylesModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/import-materials-and-styles-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
+					// Handle copy groups modal
+					const copyGroupsButton = document.querySelector(
+						'[data-bs-target="#copyGroupsModal"]'
 					);
-				}
-
-				// Handle object local axes modal
-				const objectLocalAxesModal = document.getElementById(
-					"objectLocalAxesModal"
-				);
-				if (objectLocalAxesModal) {
-					objectLocalAxesModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/object-local-axes-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
-				}
-
-				// Handle replace interface id modal
-				const replaceInterfaceIdModal = document.getElementById(
-					"replaceInterfaceIdModal"
-				);
-				if (replaceInterfaceIdModal) {
-					replaceInterfaceIdModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/replace-interface-id-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
-				}
-
-				// Handle replace spring material modal
-				const replaceSpringMaterialModal = document.getElementById(
-					"replaceSpringMaterialModal"
-				);
-				if (replaceSpringMaterialModal) {
-					replaceSpringMaterialModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/replace-spring-material-by-location-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
-				}
-
-				// Handle style collection properties modal
-				const styleCollectionPropertiesModal = document.getElementById(
-					"styleCollectionPropertiesModal"
-				);
-				if (styleCollectionPropertiesModal) {
-					styleCollectionPropertiesModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
-							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/style-collection-properties-modal.html")
-								.then((response) => response.text())
-								.then((data) => {
-									modalBody.innerHTML = data;
-								})
-								.catch((error) => {
-									console.error("Error loading modal content:", error);
-									modalBody.innerHTML = "<p>Error loading content.</p>";
-								});
-						}
-					);
-				}
-
-				// Handle sync forces modal
-				const syncForcesModal = document.getElementById("syncForcesModal");
-				if (syncForcesModal) {
-					syncForcesModal.addEventListener("show.bs.modal", function (event) {
-						const modalBody = this.querySelector(".modal-body");
-						fetch("modals/sync-forces-modal.html")
+					copyGroupsButton.addEventListener("click", function () {
+						fetch("modals/copy-groups-modal.html")
 							.then((response) => response.text())
-							.then((data) => {
-								modalBody.innerHTML = data;
+							.then((html) => {
+								document.querySelector(
+									"#copyGroupsModal .modal-body"
+								).innerHTML = html;
 							})
 							.catch((error) => {
-								console.error("Error loading modal content:", error);
-								modalBody.innerHTML = "<p>Error loading content.</p>";
+								console.error(
+									"Error loading copy groups modal content:",
+									error
+								);
 							});
 					});
-				}
 
-				// Handle velocity vector scale modal
-				const velocityVectorScaleModal = document.getElementById(
-					"velocityVectorScaleModal"
-				);
-				if (velocityVectorScaleModal) {
-					velocityVectorScaleModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
+					// Load Boundary Conditions Modal Content
+					const boundaryConditionsModal = document.getElementById(
+						"boundaryConditionsModal"
+					);
+					if (boundaryConditionsModal) {
+						boundaryConditionsModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/boundary-conditons-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle append elements modal
+					const appendElementsButton = document.querySelector(
+						'[data-bs-target="#appendElementsModal"]'
+					);
+					appendElementsButton.addEventListener("click", function () {
+						fetch("modals/append-elements-modal.html")
+							.then((response) => response.text())
+							.then((html) => {
+								document.querySelector(
+									"#appendElementsModal .modal-body"
+								).innerHTML = html;
+							})
+							.catch((error) => {
+								console.error(
+									"Error loading append elements modal content:",
+									error
+								);
+							});
+					});
+
+					// Handle anisotropic materials modal
+					const anisotropicMaterialsModal = document.getElementById(
+						"anisotropicMaterialsModal"
+					);
+					if (anisotropicMaterialsModal) {
+						anisotropicMaterialsModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/anisotropic-materials-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle create link member modal
+					const createLinkMemberModal = document.getElementById(
+						"createLinkMemberModal"
+					);
+					if (createLinkMemberModal) {
+						createLinkMemberModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/create-link-member-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle create region on segments modal
+					const createRegionOnSegmentsModal = document.getElementById(
+						"createRegionOnSegmentsModal"
+					);
+					if (createRegionOnSegmentsModal) {
+						createRegionOnSegmentsModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/create-region-on-segments-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle custom groups modal
+					const customGroupsModal =
+						document.getElementById("customGroupsModal");
+					if (customGroupsModal) {
+						customGroupsModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/custom-groups-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle dowel action modal
+					const dowelActionModal = document.getElementById("dowelActionModal");
+					if (dowelActionModal) {
+						dowelActionModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/dowel-action-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle equations modal
+					const equationsModal = document.getElementById("equationsModal");
+					if (equationsModal) {
+						equationsModal.addEventListener("show.bs.modal", function (event) {
 							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/velocity-vector-scale-modal.html")
+							fetch("modals/equations-modal.html")
 								.then((response) => response.text())
 								.then((data) => {
 									modalBody.innerHTML = data;
@@ -1614,20 +1475,125 @@
 									console.error("Error loading modal content:", error);
 									modalBody.innerHTML = "<p>Error loading content.</p>";
 								});
-						}
-					);
-				}
+						});
+					}
 
-				// Handle wall stirrup extensions modal
-				const wallStirrupExtensionsModal = document.getElementById(
-					"wallStirrupExtensionsModal"
-				);
-				if (wallStirrupExtensionsModal) {
-					wallStirrupExtensionsModal.addEventListener(
-						"show.bs.modal",
-						function (event) {
+					// Handle import materials and styles modal
+					const importMaterialsStylesModal = document.getElementById(
+						"importMaterialsStylesModal"
+					);
+					if (importMaterialsStylesModal) {
+						importMaterialsStylesModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/import-materials-and-styles-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle object local axes modal
+					const objectLocalAxesModal = document.getElementById(
+						"objectLocalAxesModal"
+					);
+					if (objectLocalAxesModal) {
+						objectLocalAxesModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/object-local-axes-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle replace interface id modal
+					const replaceInterfaceIdModal = document.getElementById(
+						"replaceInterfaceIdModal"
+					);
+					if (replaceInterfaceIdModal) {
+						replaceInterfaceIdModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/replace-interface-id-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle replace spring material modal
+					const replaceSpringMaterialModal = document.getElementById(
+						"replaceSpringMaterialModal"
+					);
+					if (replaceSpringMaterialModal) {
+						replaceSpringMaterialModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/replace-spring-material-by-location-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle style collection properties modal
+					const styleCollectionPropertiesModal = document.getElementById(
+						"styleCollectionPropertiesModal"
+					);
+					if (styleCollectionPropertiesModal) {
+						styleCollectionPropertiesModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/style-collection-properties-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle sync forces modal
+					const syncForcesModal = document.getElementById("syncForcesModal");
+					if (syncForcesModal) {
+						syncForcesModal.addEventListener("show.bs.modal", function (event) {
 							const modalBody = this.querySelector(".modal-body");
-							fetch("modals/wall-stirrup-extensions-modal.html")
+							fetch("modals/sync-forces-modal.html")
 								.then((response) => response.text())
 								.then((data) => {
 									modalBody.innerHTML = data;
@@ -1636,10 +1602,76 @@
 									console.error("Error loading modal content:", error);
 									modalBody.innerHTML = "<p>Error loading content.</p>";
 								});
-						}
+						});
+					}
+
+					// Handle velocity vector scale modal
+					const velocityVectorScaleModal = document.getElementById(
+						"velocityVectorScaleModal"
 					);
-				}
-			});
-		</script>
+					if (velocityVectorScaleModal) {
+						velocityVectorScaleModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/velocity-vector-scale-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle wall stirrup extensions modal
+					const wallStirrupExtensionsModal = document.getElementById(
+						"wallStirrupExtensionsModal"
+					);
+					if (wallStirrupExtensionsModal) {
+						wallStirrupExtensionsModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/wall-stirrup-extensions-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+
+					// Handle Other Utilities Modal
+					const otherUtilitiesModal = document.getElementById(
+						"otherUtilitiesModal"
+					);
+					if (otherUtilitiesModal) {
+						otherUtilitiesModal.addEventListener(
+							"show.bs.modal",
+							function (event) {
+								const modalBody = this.querySelector(".modal-body");
+								fetch("modals/other-utilities-modal.html")
+									.then((response) => response.text())
+									.then((data) => {
+										modalBody.innerHTML = data;
+									})
+									.catch((error) => {
+										console.error("Error loading modal content:", error);
+										modalBody.innerHTML = "<p>Error loading content.</p>";
+									});
+							}
+						);
+					}
+				});
+			</script>
+		</div>
 	</body>
 </html>

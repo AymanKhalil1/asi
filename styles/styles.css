@@ -170,3 +170,15 @@ h6 {
 	opacity: 0;
 	pointer-events: none;
 }
+
+/* Make the offcanvas sidebar body fill the viewport height and scrollable */
+.offcanvas-body {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Make the main content area fill the viewport height and scrollable */
+.col-md-9[data-bs-spy="scroll"] {
+    height: 100vh !important;
+    overflow-y: auto;
+}

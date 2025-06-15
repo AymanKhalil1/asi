@@ -50,7 +50,60 @@
 			</nav>
 
 			<div class="content">
-				<p>Placeholder content for Anisotropic Materials</p>
+				<div class="text-end mb-2">
+					<a
+						href="modals/anisotropic-materials-modal.html"
+						target="_blank"
+						class="btn btn-sm btn-outline-primary open-modal-standalone-btn">
+						Open this page in a new tab
+					</a>
+				</div>
+				<p>
+					ELS V11 adds the ability to model using custom defined anisotropic
+					materials, i.e., materials with different properties in different
+					directions. This is useful for modeling materials like wood,
+					fiber-reinforced composites, quartz, as well as some arrangements of
+					reinforced concrete that can exhibit different physical properties
+					such as crack formation behavior, thermal expansion, and elastic
+					moduli in different directions.
+				</p>
+				<p>
+					The new option is available in the Preprocessing Browser. The user can
+					create custom groups of elements and assign different materials to
+					them depending on the axis of interest.
+				</p>
+				<figure class="figure modal-figure-medium">
+					<a
+						href="../images/new-features/anisotropic-materials/anisotropic-material-group.gif"
+						target="_blank">
+						<img
+							src="../images/new-features/anisotropic-materials/anisotropic-material-group.gif"
+							class="img-thumbnail modal-figure-medium-img rounded"
+							alt="Anisotropic materials demo in ELS" />
+					</a>
+					<figcaption class="figure-caption text-center">
+						Demonstration of assigning anisotropic materials in ELS V11.
+					</figcaption>
+				</figure>
+
+				<p>
+					For maximum customization, users can define their own materials in the
+					Material Generator and use those for the anisotropic material's axes.
+				</p>
+
+				<figure class="figure modal-figure-medium">
+					<a
+						href="../images/new-features/anisotropic-materials/user-defined-materials.gif"
+						target="_blank">
+						<img
+							src="../images/new-features/anisotropic-materials/user-defined-materials.gif"
+							class="img-thumbnail modal-figure-medium-img rounded"
+							alt="" />
+					</a>
+					<figcaption class="figure-caption text-center">
+						<!-- Add caption here -->
+					</figcaption>
+				</figure>
 			</div>
 
 			<footer class="mt-4 text-muted">
@@ -63,5 +116,14 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script>
+			// Hide the open-in-new-tab button if already in a top-level window (not in a modal or iframe)
+			document.addEventListener("DOMContentLoaded", function () {
+				var openBtn = document.querySelector(".open-modal-standalone-btn");
+				if (openBtn && window.self === window.top) {
+					openBtn.style.display = "none";
+				}
+			});
+		</script>
 	</body>
 </html>

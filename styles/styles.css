@@ -191,6 +191,7 @@ h6 {
 	margin-left: auto;
 	margin-right: auto;
 	display: block;
+	padding: 1.5rem 0; /* Add vertical padding for spacing */
 }
 .modal-figure-medium-img {
 	width: 100%;
@@ -200,7 +201,17 @@ h6 {
 	display: block;
 	transition: transform 0.3s;
 }
-.modal-figure-medium-img:hover {
+/* Only apply highlight/enlarge to images, not videos */
+.modal-figure-medium-img:not(video):hover {
 	transform: scale(1.2);
 	border: 3px solid #00ff00;
+}
+video.rounded {
+	border-radius: 0.5rem !important;
+}
+video.img-thumbnail {
+	padding: 0.25rem !important;
+	background-color: #fff !important;
+	border: 3px solid #040024 !important;
+	box-shadow: 0 12px 8px rgba(0, 0, 0, 0.2) !important;
 }

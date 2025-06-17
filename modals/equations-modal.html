@@ -50,8 +50,167 @@
 			</nav>
 
 			<div class="content">
-				<p>Placeholder content for Equations</p>
+				<h3>Equations</h3>
+				<p>
+					The Equations feature in ELS parlance refers to the ability to define
+					and manipulate mathematical formulae which contain multiple physical
+					quantities (e.g., stress, strain, displacement, etc.) and then use
+					these formulae to compute new quantities. These new quantities can
+					then be visualized in the ELS Viewer or used in other analyses. Lorem
+					ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+					euismod, nisi eu consectetur cursus, nisl erat dictum erat, nec dictum
+					nisi nisl euismod erat. Sed euismod, nisl eu consectetur cursus, nisl
+					erat dictum erat, nec dictum nisi nisl euismod erat. Etiam euismod,
+					nisi eu consectetur cursus, nisl erat dictum erat, nec dictum nisi
+					nisl euismod erat.
+				</p>
+				<h3>Modularized Equations Feature</h3>
+				<p>
+					ELS V11 introduces a modularized approach to equations, allowing for
+					greater flexibility and customization in result analysis, and broader
+					use with more ELS Viewer components. The new Equations feature is
+					available from the Tools tab in the ELS Viewer.
+				</p>
+				<figure class="figure modal-figure-medium">
+					<a
+						href="../images/new-features/equations/equations-in-tab.png"
+						target="_blank">
+						<img
+							src="../images/new-features/equations/equations-in-tab.png"
+							class="img-thumbnail modal-figure-medium-img rounded"
+							alt="Equations in Tab" />
+					</a>
+					<figcaption class="figure-caption">Equations in Tools Tab</figcaption>
+				</figure>
+				<p>Equations can be created for:</p>
+				<ol>
+					<li>Elements</li>
+					<li>Springs</li>
+					<li>Straining Actions</li>
+				</ol>
+
+				<h3>Equation Generator Dialog</h3>
+				<p>
+					Clicking one of the Equation options opens the Equation Generator
+					dialog, where you can create, edit, and manage equations.
+				</p>
+				<figure class="figure modal-figure-medium">
+					<video
+						class="modal-figure-medium-img rounded img-thumbnail"
+						width="100%"
+						controls
+						muted
+						playsinline>
+						<source
+							src="../images/new-features/equations/open-equation-generator.mov"
+							type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</figure>
+				<p>
+					The Equation Generator dialog allows you to define equations using a
+					simple syntax, which can include mathematical operations, functions,
+					and physical quantities. To create a new equation, click the
+					<i>New</i>
+					button.
+				</p>
+				<figure class="figure modal-figure-medium">
+					<video
+						class="modal-figure-medium-img rounded img-thumbnail"
+						width="100%"
+						controls
+						muted
+						loop
+						playsinline>
+						<source
+							src="../images/new-features/equations/create-custom-equation.mov"
+							type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</figure>
+				<p>
+					In order to start building the equation, rename the equation in the
+					Equation Name field in the table, then press the
+					<i>Details</i> button.
+				</p>
+				<ol>
+					<li>Click the upper <i>Add</i> button to add variables.</li>
+					<li>
+						Choose a physical quantity to assign to each new variable from the
+						<i>Type</i> dropdown.
+					</li>
+					<li>
+						Use the provided calculator-like interface to build a mathematical
+						expression using the created variables, which correspond to physical
+						quantities.
+					</li>
+					<li>
+						To add variables to the expression field, select a variable from the
+						<i>Variable Type</i> dropdown.
+					</li>
+					<li>
+						Press <i>OK</i> to add the new equation, then <i>OK</i> again to
+						close the Equation Generator dialog.
+					</li>
+				</ol>
+				<p>
+					The video below demonstrates the process of building the custom
+					formula
+					<math xmlns="http://www.w3.org/1998/Math/MathML"
+						><msqrt
+							><mrow
+								><msup><mi>A</mi><mn>2</mn></msup
+								><mo>+</mo><msup><mi>B</mi><mn>2</mn></msup></mrow
+							></msqrt
+						></math
+					>, where and B are the variables representing the X-acceleration and
+					the Y-acceleration, respectively.
+				</p>
+				<figure class="figure modal-figure-medium">
+					<video
+						class="modal-figure-medium-img rounded img-thumbnail"
+						width="100%"
+						controls
+						muted
+						playsinline>
+						<source
+							src="../images/new-features/equations/build-custom-equation.mp4"
+							type="video/mp4" />
+						Your browser does not support the video tag.
+					</video>
+				</figure>
 			</div>
+			<p>
+				After creating the equation, you can use it to plot charts or as
+				filtration criteria.
+			</p>
+			<figure class="figure modal-figure-medium">
+				<a
+					href="../images/new-features/equations/equations-for-charts.png"
+					target="_blank">
+					<img
+						src="../images/new-features/equations/equations-for-charts.png"
+						class="img-thumbnail modal-figure-medium-img rounded"
+						alt="Equations for Charts"
+						style="width: 50%; height: auto" />
+				</a>
+				<figcaption class="figure-caption text-center">
+					Equations for Charts
+				</figcaption>
+			</figure>
+			<figure class="figure modal-figure-medium">
+				<a
+					href="../images/new-features/equations/equations-for-filters.png"
+					target="_blank">
+					<img
+						src="../images/new-features/equations/equations-for-filters.png"
+						class="img-thumbnail modal-figure-medium-img rounded"
+						alt="Equations for Filters" />
+				</a>
+				<figcaption class="figure-caption text-center">
+					Equations for Filters
+				</figcaption>
+			</figure>
 
 			<footer class="mt-4 text-muted">
 				<small

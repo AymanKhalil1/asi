@@ -14,7 +14,6 @@
 			href="../styles/styles.css" />
 	</head>
 	<body>
-		<!-- Add a top anchor for Back to Top links -->
 		<a id="top"></a>
 		<div class="container">
 			<h2>Other Utilities & Features</h2>
@@ -26,7 +25,7 @@
 					<li><a href="#dowel-action">Dowel Action</a></li>
 					<li><a href="#object-local-axes">Object Local Axes</a></li>
 					<li>
-						<a href="#replace-spring-material">Replace Spring Material</a>
+						<a href="#spring-utilities">Spring-related Utility Updates</a>
 					</li>
 					<li>
 						<a href="#style-collection-properties"
@@ -41,16 +40,22 @@
 				</ul>
 			</div>
 			<ul class="list-group mb-4">
+				<!-- ==================== Create Region on Segments ==================== -->
 				<li class="list-group-item">
 					<h5 id="create-region">Create Region on Segments</h5>
 					<div class="mt-2">
 						ELS V11 introduces a new utility that allows users to create 8-Node
 						regions on segments of a hybrid polyline. This is specially useful
 						when working with multiplanar complex geometries and requiring a
-						precise definition of a region's boundaries, for later use in
-						changing spring materials along a certain path, or removing them
-						entirely and thus inducing a crack.
-						<!-- //insert two video blocks here -->
+						precise definition of a region's boundaries. The user can then use
+						in any preprocessing action, e.g. changing spring materials along a
+						certain path, or removing them entirely and thus inducing a crack.
+
+						<p>
+							To use this utility, select any hybrid polyline draft, click the
+							<i>Additional Tasks</i> button, choose <i>Convert Draft To</i>,
+							then <i>Create 8-Node Regions on Segments</i>.
+						</p>
 						<figure class="figure modal-figure-medium">
 							<video
 								class="modal-figure-medium-img rounded img-thumbnail"
@@ -59,28 +64,12 @@
 								muted
 								playsinline>
 								<source
-									src="../images/new-features/create-region-on-segments/create-region-demo-1.mp4"
+									src="../images/new-features/other-utilities/regions-on-segments.mp4"
 									type="video/mp4" />
 								Your browser does not support the video tag.
 							</video>
 							<figcaption class="figure-caption text-center">
-								Create Region on Segments - Demo 1 (update caption as needed).
-							</figcaption>
-						</figure>
-						<figure class="figure modal-figure-medium">
-							<video
-								class="modal-figure-medium-img rounded img-thumbnail"
-								width="100%"
-								controls
-								muted
-								playsinline>
-								<source
-									src="../images/new-features/create-region-on-segments/create-region-demo-2.mp4"
-									type="video/mp4" />
-								Your browser does not support the video tag.
-							</video>
-							<figcaption class="figure-caption text-center">
-								Create Region on Segments - Demo 2 (update caption as needed).
+								Create Region on Segments
 							</figcaption>
 						</figure>
 					</div>
@@ -90,40 +79,227 @@
 						>Back to Top</a
 					>
 				</li>
+				<!-- ==================== Dowel Action ==================== -->
 				<li class="list-group-item">
 					<h5 id="dowel-action">Dowel Action</h5>
 					<div class="mt-2">
-						Demonstration and explanation of dowel action utility.
+						New properties added in the Properties Browser for any structural
+						component that contains reinforcement and/or stirrups. If enabled,
+						the new properties, an rft dowel action toggle and a stirrup dowel
+						action toggle, replace the single spring that normally represents an
+						RFT rebar or stirrup branch with four springs to allow for
+						nonuniform stress distribution in a single rebar's cross‐section
+						(i.e. rebars will allow for some bending moment resistance).
 					</div>
+					<!-- insert a figure block here -->
+					<figure class="figure modal-figure-medium">
+						<a
+							href="../images/other-utilities/dowel-action-demo.png"
+							target="_blank">
+							<img
+								src="../images/new-features/other-utilities/dowel-action.png"
+								class="img-thumbnail modal-figure-medium-img rounded"
+								alt="Dowel Action demonstration" />
+						</a>
+						<figcaption class="figure-caption text-center">
+							The Effect of Enabling Dowel Action in RFT and Stirrups.
+						</figcaption>
+					</figure>
 					<a
 						href="#top"
 						class="d-block mt-2 small"
 						>Back to Top</a
 					>
 				</li>
+				<!-- ==================== Object Local Axes ==================== -->
 				<li class="list-group-item">
 					<h5 id="object-local-axes">Object Local Axes</h5>
 					<div class="mt-2">
-						Demonstration and explanation of object local axes feature.
+						<p>
+							New option to in the ELS Viewer to toggle the visibility of local
+							axes of individual objects added to the <i>Properties</i> Browser.
+						</p>
+						<figure class="figure modal-figure-medium">
+							<video
+								class="modal-figure-medium-img rounded img-thumbnail"
+								width="100%"
+								controls
+								muted
+								playsinline>
+								<source
+									src="../images/new-features/other-utilities/show-local-axes.mp4"
+									type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+							<figcaption class="figure-caption text-center">
+								Toggling Local Axes Visibility in the ELS Viewer
+							</figcaption>
+						</figure>
+						<p>
+							Addtionally, the <i>Contours</i> dialog now has a new option of
+							calculating contours in the direction of local axes.
+						</p>
+						<figure class="figure modal-figure-medium">
+							<a
+								href="../images/new-features/other-utilities/contours-for-local-axes.png"
+								target="_blank">
+								<img
+									src="../images/new-features/other-utilities/contours-for-local-axes.png"
+									class="img-thumbnail modal-figure-medium-img rounded w-50"
+									alt="Switching local axes visibility" />
+							</a>
+							<figcaption class="figure-caption text-center">
+								Contours in the Direction of Local Axes
+							</figcaption>
+						</figure>
+						<p>
+							The ELS Viewer also allows the user to cycle the directions of the
+							local axes of any wall object.
+
+							<figure class="figure modal-figure-medium">
+								<video
+									class="modal-figure-medium-img rounded img-thumbnail"
+									width="100%"
+									controls
+									muted
+									playsinline>
+									<source
+										src="../images/new-features/other-utilities/switch-local-axes.mp4"
+										type="video/mp4" />
+									Your browser does not support the video tag.
+								</video>
+								<figcaption class="figure-caption text-center"></figcaption>
+							</figure>
+						</p>
 					</div>
+
 					<a
 						href="#top"
 						class="d-block mt-2 small"
 						>Back to Top</a
 					>
 				</li>
+				<!-- ==================== Spring-related Utility Updates ==================== -->
 				<li class="list-group-item">
-					<h5 id="replace-spring-material">Replace Spring Material</h5>
-					<div class="mt-2">
-						Demonstration and explanation of replacing spring material by
-						location.
-					</div>
+					<h5 id="spring-utilities">Spring-related Utility Updates</h5>
+					<ul>
+						<li>
+							<h6>Replace Spring Material by Location</h6>
+							<div class="mt-2">
+								New option added in Preprocessing to change the spring material
+								for selected element groups. The user can specify the location
+								of the springs intended for the material changing action:
+								between elements of the same object, between elements of
+								different objects, or both.
+							</div>
+
+							<figure class="figure modal-figure-medium">
+								<a
+									href="../images/new-features/other-utilities/spring-location.png"
+									target="_blank">
+									<img
+										src="../images/new-features/other-utilities/spring-location.png"
+										class="img-thumbnail modal-figure-medium-img rounded w-75"
+										alt="Replace Spring Material by Location" />
+								</a>
+								<figcaption class="figure-caption text-center">
+									Replace Spring Material by Location
+								</figcaption>
+							</figure>
+							<p>
+								In the following example, the elements (purple outline) assigned
+								to the group are the same in all three cases, but the set of
+								springs that changes materials (purple colored) differs in each
+								case based on the chosen location.
+							</p>
+							<figure class="figure modal-figure-medium">
+								<a
+									href="../images/new-features/other-utilities/spring-location-demo-elements.png"
+									target="_blank">
+									<img
+										src="../images/new-features/other-utilities/spring-location-demo-elements.png"
+										class="img-thumbnail modal-figure-medium-img rounded w-75"
+										alt="Spring Location Elements" />
+								</a>
+								<figcaption class="figure-caption text-center">
+									Spring Location Elements
+								</figcaption>
+							</figure>
+							<p>
+								In the first case shown below, the springs that get changed when
+								the <i>Choose Springs Across Objects</i> are chosen are the ones
+								that link two different objects, such as girder to slab (green
+								highlight) or column to girder (yellow highlight).
+							</p>
+							<figure class="figure modal-figure-medium">
+								<a
+									href="../images/new-features/other-utilities/change-springs-across-objects.png"
+									target="_blank">
+									<img
+										src="../images/new-features/other-utilities/change-springs-across-objects.png"
+										class="img-thumbnail modal-figure-medium-img rounded w-75"
+										alt="Change Springs Across Objects" />
+								</a>
+								<figcaption class="figure-caption text-center">
+									Case 1: Change Springs Across Objects
+								</figcaption>
+							</figure>
+							<p>
+								In the second case, the springs that get changed when the
+								<i>Choose Springs in Same Object</i> option is chosen are the
+								ones that link elements of the same objects, such as the ones
+								between elements of the slab (yellow highlight), the ones
+								between elements of the column (blue highlight), or the ones
+								between elements of the girder (green highlight).
+							</p>
+							<figure class="figure modal-figure-medium">
+								<a
+									href="../images/new-features/other-utilities/change-springs-in-same-object.png"
+									target="_blank">
+									<img
+										src="../images/new-features/other-utilities/change-springs-in-same-object.png"
+										class="img-thumbnail modal-figure-medium-img rounded w-75"
+										alt="Change Springs in Same Object" />
+								</a>
+								<figcaption class="figure-caption text-center">
+									Case 2: Change Springs in Same Object
+								</figcaption>
+							</figure>
+							<p>
+								In the third case, the springs that get changed when the
+								<i>All</i> option is chosen are all of the springs that link
+								elements of the same object or two different objects, for
+								example, the ones belonging to a single object (between slab
+								elements ‐ blue highlight), and the ones joining different
+								objects (between girder and slab elements ‐ yellow highlight).
+							</p>
+							<figure class="figure modal-figure-medium">
+								<a
+									href="../images/new-features/other-utilities/change-all-springs.png"
+									target="_blank">
+									<img
+										src="../images/new-features/other-utilities/change-all-springs.png"
+										class="img-thumbnail modal-figure-medium-img rounded w-75"
+										alt="Change All Springs" />
+								</a>
+								<figcaption class="figure-caption text-center">
+									Case 3: Change All Springs
+								</figcaption>
+							</figure>
+						</li>
+
+						<li>
+							<h6>Spring Controller Filters</h6>
+							<div class="mt-2"></div>
+						</li>
+					</ul>
 					<a
 						href="#top"
 						class="d-block mt-2 small"
 						>Back to Top</a
 					>
 				</li>
+				<!-- ==================== Style Collection Properties ==================== -->
 				<li class="list-group-item">
 					<h5 id="style-collection-properties">Style Collection Properties</h5>
 					<div class="mt-2">
@@ -135,6 +311,7 @@
 						>Back to Top</a
 					>
 				</li>
+				<!-- ==================== Sync Forces ==================== -->
 				<li class="list-group-item">
 					<h5 id="sync-forces">Sync Forces</h5>
 					<div class="mt-2">
@@ -146,6 +323,7 @@
 						>Back to Top</a
 					>
 				</li>
+				<!-- ==================== Velocity Vector Scale ==================== -->
 				<li class="list-group-item">
 					<h5 id="velocity-vector-scale">Velocity Vector Scale</h5>
 					<div class="mt-2">
@@ -157,6 +335,7 @@
 						>Back to Top</a
 					>
 				</li>
+				<!-- ==================== Wall Stirrup Extensions ==================== -->
 				<li class="list-group-item">
 					<h5 id="wall-stirrup-extensions">Wall Stirrup Extensions</h5>
 					<div class="mt-2">

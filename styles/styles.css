@@ -124,14 +124,28 @@ ol {
 	border-radius: 0 6px 6px 0;
 }
 h1 {
-	font-size: 1.5em;
+	font-size: 2em;
+	font-weight: 700;
 }
-h2,
-h3,
-h4,
-h5,
+h2 {
+	font-size: 1.75em;
+	font-weight: 600;
+}
+h3 {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+h4 {
+	font-size: 1.3em;
+	font-weight: 500;
+}
+h5 {
+	font-size: 1.15em;
+	font-weight: 500;
+}
 h6 {
-	font-size: 90%;
+	font-size: 1.05em;
+	font-weight: 500;
 }
 
 .card-title {

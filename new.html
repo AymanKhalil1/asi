@@ -13,12 +13,24 @@ document.addEventListener('DOMContentLoaded', function() {
 				var section = document.querySelector(hash);
 				if (section) {
 					var card = section.querySelector('.card');
-					if (card) {
-						card.classList.add('card-animate-fade');
-						setTimeout(function() {
-							card.classList.remove('card-animate-fade');
-						}, 1500);
-					}
+if (card) {
+	card.classList.add('card-animate-fade');
+	setTimeout(function() {
+		card.classList.remove('card-animate-fade');
+	}, 1500);
+	var scrollContainer = document.querySelector('.col-md-9[tabindex]');
+	if (scrollContainer && section) {
+		e.preventDefault();
+		var offset = 0;
+		var el = section;
+		while (el && el !== scrollContainer) {
+			offset += el.offsetTop;
+			el = el.offsetParent;
+		}
+		offset -= 20;
+		scrollContainer.scrollTo({ top: offset, behavior: 'smooth' });
+	}
+}
 				}
 			}
 		});
@@ -200,42 +212,18 @@ document.addEventListener('DOMContentLoaded', function() {
 					class="col-md-3 d-none d-md-block position-sticky"
 					style="top: 80px; z-index: 2">
 				   <ul class="nav flex-column nav-pills" id="scrollspyMenu">
-					   <li class="nav-item">
-						   <a class="nav-link" href="#interface">Interface</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#properties-browser">Properties Browser</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#divide-multiple-planes">Divide with Multiple Planes</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#copy-groups">Copy Groups</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#create-link-member">Create Link Member</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#anisotropic-materials">Anisotropic Materials</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#boundary-conditions">Boundary Conditions</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#append-elements">Append Elements</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#equations">Equations</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#import-materials">Import Materials and Styles</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#replace-interface-id">Replace Interface ID</a>
-					   </li>
-					   <li class="nav-item">
-						   <a class="nav-link" href="#other-utilities">Other Utilities & Features</a>
-					   </li>
+					   <li class="nav-item"><a class="nav-link" href="#interface">Interface</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#properties-browser">Properties Browser</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#divide-multiple-planes">Divide with Multiple Planes</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#boundary-conditions">Boundary Conditions</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#append-elements">Append Elements</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#copy-groups">Copy Groups</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#create-link-member">Create Link Member</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#anisotropic-materials">Anisotropic Materials</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#equations">Equations</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#import-materials">Import Materials and Styles</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#replace-interface-id">Replace Interface ID</a></li>
+					   <li class="nav-item"><a class="nav-link" href="#other-utilities">Other Utilities & Features</a></li>
 				   </ul>
 				</nav>
 				<!-- Main Content with Scrollspy -->
@@ -308,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
 						   </div>
 					   </div>
 				   </section>
-				   <!-- Copy Groups, Create Link Member, Anisotropic Materials: 2-column layout, each card in its own section -->
+				   <!-- Copy Groups, Create Link Member, Anisotropic Materials: 2-column layout, each card in its own section as direct children -->
 				   <div class="row g-4 align-items-stretch">
 					   <section id="copy-groups" class="col-md-6 mb-4 card-section d-flex flex-column">
 						   <h2 class="visually-hidden">Copy Groups</h2>
@@ -323,19 +311,17 @@ document.addEventListener('DOMContentLoaded', function() {
 							   </div>
 						   </div>
 					   </section>
-					   <div class="col-md-6 d-flex flex-column" style="gap: 1.5rem; align-items: stretch;">
-						   <section id="create-link-member" class="mb-4 card-section">
-							   <h2 class="visually-hidden">Create Link Member</h2>
-							   <div class="card w-100 mb-3" data-nav="#create-link-member">
-								   <img src="images/new-features/create-link-member/create-link-member.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Create Link Member" />
-								   <div class="card-body d-flex flex-column">
-									   <h5 class="card-title">Create Link Member</h5>
-									   <p class="card-text">Easily create a link member between two selected elements of different components.</p>
-									   <a href="#" class="btn btn-primary align-self-start" data-bs-toggle="modal" data-bs-target="#createLinkMemberModal">Learn More</a>
-								   </div>
+					   <section id="create-link-member" class="col-md-6 mb-4 card-section d-flex flex-column">
+						   <h2 class="visually-hidden">Create Link Member</h2>
+						   <div class="card w-100 mb-3" data-nav="#create-link-member">
+							   <img src="images/new-features/create-link-member/create-link-member.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Create Link Member" />
+							   <div class="card-body d-flex flex-column">
+								   <h5 class="card-title">Create Link Member</h5>
+								   <p class="card-text">Easily create a link member between two selected elements of different components.</p>
+								   <a href="#" class="btn btn-primary align-self-start" data-bs-toggle="modal" data-bs-target="#createLinkMemberModal">Learn More</a>
 							   </div>
-						   </section>
-						   <section id="anisotropic-materials" class="card-section">
+						   </div>
+						   <section id="anisotropic-materials" class="mt-4 card-section d-flex flex-column">
 							   <h2 class="visually-hidden">Anisotropic Materials</h2>
 							   <div class="card w-100" data-nav="#anisotropic-materials">
 								   <img src="images/new-features/anisotropic-materials/anisotropic-materials.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Anisotropic Materials" />
@@ -346,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
 								   </div>
 							   </div>
 						   </section>
-					   </div>
+					   </section>
 				   </div>
 	   <style>
 		   /* Make section.card-section behave like contents so grid/row works */

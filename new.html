@@ -54,7 +54,7 @@ if (card) {
 	</head>
 
 	<body>
-		<div class="container">
+		<div class="container" style="height: 100%;">
 			<div
 				class="offcanvas offcanvas-start"
 				id="offcanvas-navigation">
@@ -227,7 +227,7 @@ if (card) {
 				   </ul>
 				</nav>
 				<!-- Main Content with Scrollspy -->
-			   <div class="col-md-9" tabindex="0" style="position: relative; height: 80vh; overflow-y: auto">
+			   <div class="col-md-9" tabindex="0" style="position: relative; height: 95vh; overflow-y: auto">
 				   <h1 id="top">What's New in V11?</h1>
 				   <p>
 					   ELS has seen a host of major changes in its eleventh iteration, as
@@ -452,6 +452,10 @@ if (card) {
 				min-height: 220px;
 				scroll-margin-top: 90px;
 				margin-bottom: 3rem;
+				margin-bottom: 3rem;
+			}
+			.col-md-9 > section:last-of-type {
+				margin-bottom: 0;
 			}
 			/* Make Create Link Member and Equations sections taller for Scrollspy accuracy */
 			#create-link-member,

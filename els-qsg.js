@@ -397,6 +397,31 @@ document.addEventListener("DOMContentLoaded", function () {
 				.then((response) => response.text())
 				.then((data) => {
 					modalBody.innerHTML = data;
+					// Add handler for Back to Top links inside the modal
+					setTimeout(function() {
+						modalBody.querySelectorAll('a[href="#top"]').forEach(function(link) {
+							link.addEventListener('click', function(e) {
+								e.preventDefault();
+								// Find the nearest scrollable ancestor (including modalBody itself)
+								var el = link.parentElement;
+								var found = false;
+								while (el && el !== document.body) {
+									var style = window.getComputedStyle(el);
+									var overflowY = style.overflowY;
+									if ((overflowY === 'auto' || overflowY === 'scroll') && el.scrollHeight > el.clientHeight) {
+										el.scrollTo({ top: 0, behavior: 'smooth' });
+										found = true;
+										break;
+									}
+									el = el.parentElement;
+								}
+								// Fallback: scroll modalBody if nothing else found
+								if (!found) {
+									modalBody.scrollTo({ top: 0, behavior: 'smooth' });
+								}
+							});
+						});
+					}, 0);
 				})
 				.catch((error) => {
 					console.error("Error loading modal content:", error);

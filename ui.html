@@ -1,131 +1,19 @@
-<!DOCTYPE html>
 <html>
 	<head>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 			rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		<link
-			rel="stylesheet"
-			href="styles/styles.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
 		<title>ELS Quick Start Guide</title>
 	</head>
-
 	<body>
-		<div
-			class="offcanvas offcanvas-start"
-			id="offcanvas-navigation">
-			<div class="offcanvas-header">
-				<h3 class="offcanvas-title">ELS Quick Start Guide</h3>
-				<button
-					type="button"
-					class="btn-close text-reset"
-					data-bs-dismiss="offcanvas"></button>
-			</div>
-			<div class="offcanvas-body">
-				<nav class="navbar">
-					<!-- navbar div start -->
-					<div class="container-fluid">
-						<!-- <a class="navbar-brand" href="https://www.extremeloading.com/"
-          ><img src="images/ELS-logo.png" alt="ELS Logo"
-        /></a> -->
-
-						<ul class="navbar-nav">
-							<li class="nav-item">
-								<a
-									class="nav-link"
-									href="qsghome.html"
-									>QSG Home</a
-								>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link"
-									href="new.html"
-									>What's New in ELS V11</a
-								>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link current-link"
-									href="ui.html"
-									>User Interface</a
-								>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link"
-									href="main-process.html"
-									>The Main Process</a
-								>
-								<ul>
-									<li class="nav-item">
-										<a
-											class="nav-link"
-											href="#"
-											>Modeling</a
-										>
-										<ul>
-											<li class="nav-item">
-												<a
-													class="nav-link"
-													href="#"
-													>Step 1</a
-												>
-											</li>
-											<li class="nav-item">
-												<a
-													class="nav-link"
-													href="#"
-													>Step 2</a
-												>
-											</li>
-											<li class="nav-item">
-												<a
-													class="nav-link"
-													href="#"
-													>Step 3</a
-												>
-											</li>
-											<li class="nav-item">
-												<a
-													class="nav-link"
-													href="#"
-													>Step 4</a
-												>
-											</li>
-											<li class="nav-item">
-												<a
-													class="nav-link"
-													href="#"
-													>Step 5</a
-												>
-											</li>
-										</ul>
-									</li>
-									<li class="nav-item">
-										<a
-											class="nav-link btn-outline-dark"
-											href="#"
-											>Results</a
-										>
-									</li>
-								</ul>
-							</li>
-						</ul>
-						<!--navigation list end-->
-					</div>
-					<!-- navbar div end -->
-				</nav>
-			</div>
-		</div>
-		<!--offcanvas div end-->
-		<!-- Button to open the offcanvas sidebar -->
+		<!-- Sidebar Toggle Button (fixed, modern style) -->
 		<button
-			class="btn btn-outline-dark"
+			id="sidebar-toggle-btn"
+			class="btn btn-outline-dark position-fixed bg-white shadow d-flex align-items-center"
+			style="top: 20px; left: 20px; z-index: 2000; border-radius: 8px"
 			type="button"
 			data-bs-toggle="offcanvas"
 			data-bs-target="#offcanvas-navigation"
@@ -136,22 +24,504 @@
 				height="16"
 				fill="currentColor"
 				class="bi bi-list"
-				viewBox="0 0 16 16">
+				viewBox="0 0 16 16"
+				aria-hidden="true"
+				focusable="false">
 				<path
 					fill-rule="evenodd"
 					d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
 			</svg>
+			<span
+				class="ms-2 d-none d-sm-inline"
+				style="font-size: 1em; font-weight: 500">
+				Quick Start Guide Navigation
+			</span>
 		</button>
+		<!-- Offcanvas Sidebar (should be outside main-content-fixed) -->
+		<div class="offcanvas offcanvas-start" id="offcanvas-navigation">
+			<div class="offcanvas-header">
+				<h3 class="offcanvas-title">ELS Quick Start Guide</h3>
+				<button
+					type="button"
+					class="btn-close text-reset"
+					data-bs-dismiss="offcanvas"></button>
+			</div>
+			<div class="offcanvas-body">
+				<nav class="navbar">
+					<div class="container">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="qsghome.html">QSG Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="new.html">What's New in ELS V11</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link current-link" href="ui.html">
+									User Interface
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="main-process.html">
+									The Main Process
+								</a>
+								<ul>
+									<li class="nav-item">
+										<a class="nav-link" href="#">Modeling</a>
+										<ul>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Step 1</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Step 2</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Step 3</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Step 4</a>
+											</li>
+											<li class="nav-item">
+												<a class="nav-link" href="#">Step 5</a>
+											</li>
+										</ul>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link btn-outline-dark" href="#">Results</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
 
-		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="qsghome.html">Home</a></li>
-				<li
-					class="breadcrumb-item active"
-					aria-current="page">
-					User Interface
-				</li>
-			</ol>
-		</nav>
+		<!-- Main content wrapper for fixed width -->
+		<div class="main-content-fixed">
+			<div class="container mt-3 mb-4">
+				<div class="row justify-content-center">
+					<div class="col-md-8 position-relative">
+						<div class="input-group">
+							<input
+								id="site-search"
+								type="text"
+								class="form-control"
+								placeholder="Search the Quick Start Guide..."
+								aria-label="Site Search"
+								autocomplete="off" />
+							<button
+								class="btn btn-outline-secondary"
+								type="button"
+								id="site-search-btn">
+								Search
+							</button>
+						</div>
+						<ul
+							id="site-search-results"
+							class="list-group position-absolute w-100"
+							style="z-index: 1000; display: none; top: 100%; left: 0"></ul>
+					</div>
+				</div>
+			</div>
+			<script>
+				// Hide sidebar toggle button when offcanvas is open, show when closed
+				document.addEventListener("DOMContentLoaded", function () {
+					var sidebarBtn = document.getElementById("sidebar-toggle-btn");
+					var offcanvas = document.getElementById("offcanvas-navigation");
+					if (offcanvas && sidebarBtn) {
+						offcanvas.addEventListener("show.bs.offcanvas", function () {
+							sidebarBtn.style.display = "none";
+						});
+						offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+							sidebarBtn.style.display = "";
+						});
+					}
+				});
+			</script>
+
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="qsghome.html">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">
+						User Interface
+					</li>
+				</ol>
+			</nav>
+			<h1>User Interface</h1>
+			<p>
+				The ELS interface is designed to ensure the best possible work
+				efficiency while you’re modeling your project, running the analysis or
+				even documenting the results through professional reports. The interface
+				is intuitive and user-friendly, allowing you to focus on your modeling
+				tasks without unnecessary distractions. This section will focus on
+				overviewing the main components of the Modeler, while the Viewer's
+				Interface will be explained in detail in the Viewer Manual. The main
+				components of the ELS Modeler interface are:
+			</p>
+			<ul>
+				<li>The Ribbon</li>
+				<li>The Quick Access Toolbar</li>
+				<li>The Browser Panel</li>
+				<li>The Modeling window</li>
+			</ul>
+			<h2>The Ribbon</h2>
+			<p>
+				The introduction of the ribbon interface in ELS V11 marks a significant
+				milestone in the ELS user experience. By replacing traditional menus
+				with an intuitive ribbon layout, users can now access tools and features
+				more efficiently. The ribbon organizes commands in a logical, visual
+				manner, making it easier for both new and experienced users to find and
+				utilize the functionality they need. This modern approach to interface
+				design reduces the learning curve while maintaining quick access to all
+				essential modeling tools. The ribbon's contextual tabs and grouped
+				commands provide a clearer overview of available features, eliminating
+				the need to navigate through nested menu structures. This streamlined
+				approach helps users focus more on their modeling tasks and less on
+				searching for commands.
+			</p>
+			<p>
+				The diagram below shows a high level overview of the Ribbon tabs and the
+				some of functions that can be done through each one. The orange-colored
+				items are some of the most common tasks, so they are extracted to the
+				Home ribbon tab.
+			</p>
+			<figure
+				class="figure modal-figure-medium"
+				style="width: 100% !important; max-width: 900px; margin: auto">
+				<a href="images/ui/ribbon-layout.png" target="_blank">
+					<img
+						src="images/ui/ribbon-layout.png"
+						alt="ELS Ribbon Tabs Overview"
+						class="modal-figure-medium-img rounded img-thumbnail" />
+				</a>
+				<figcaption
+					class="figure-caption text-center mt-2 text-muted"
+					style="font-size: 1em">
+					Overview of the ELS Ribbon Tabs and their main functions
+				</figcaption>
+			</figure>
+
+			<!-- Ribbon Tabs Accordion Only -->
+			<div class="accordion my-4" id="ribbonTabsAccordion">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabHomeHeading">
+						<button
+							class="accordion-button"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabHome"
+							aria-expanded="true"
+							aria-controls="tabHome">
+							Home
+						</button>
+					</h2>
+					<div
+						id="tabHome"
+						class="accordion-collapse collapse show"
+						aria-labelledby="tabHomeHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<p>
+								The Home tab contains some of the most frequently used commands
+								from the Draw, Modify, Edit, View, Materials, and Analysis tabs.
+								These commands are often used multiple times, at more than one
+								project phase, so they have been conveniently placed in the Home
+								Tab.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabDrawHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabDraw"
+							aria-expanded="false"
+							aria-controls="tabDraw">
+							Draw
+						</button>
+					</h2>
+					<div
+						id="tabDraw"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabDrawHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<p>
+								The Draw Tab lists all the building pieces that can be used to
+								model a structure. These include Draft Objects that can be used
+								to help with modeling structural components or labeling a
+								structure, as well as Structural Objects that represent physical
+								structural components.
+							</p>
+							<p>The Draw tab commands are:</p>
+							<ul>
+								<li>
+									<h6>New Level</h6>
+									Inserts a new blank level into the Structure Browser, and
+									opens the Level Properties dialog box for the created level.
+								</li>
+								<li>
+									<h6>Properties</h6>
+									Opens the Structure Properties dialog box.
+								</li>
+								<li>
+									<h6>Point</h6>
+									Draws a single point which can be used as a reference, or a
+									start or end position specifier for other objects.
+								</li>
+								<li><h6>Line</h6></li>
+								<li><h6>Rectangle</h6></li>
+								<li><h6>Circle</h6></li>
+								<li><h6>Ellipse</h6></li>
+								<li><h6>Polygon</h6></li>
+								<li><h6>Polyline</h6></li>
+								<li><h6>Arc</h6></li>
+								<li><h6>B-Spline Curve</h6></li>
+								<li><h6>Hybrid</h6></li>
+								<li><h6>Axes</h6></li>
+								<li><h6>Text</h6></li>
+								<li><h6>Drafting Settings</h6></li>
+								<li><h6>Dimensions</h6></li>
+								<li><h6>Measurement</h6></li>
+								<li><h6>Protractor</h6></li>
+								<li><h6>Column</h6></li>
+								<li><h6>Circular Column</h6></li>
+								<li><h6>Girder</h6></li>
+								<li><h6>Slab</h6></li>
+								<li><h6>RFT</h6></li>
+								<li><h6>Wall</h6></li>
+								<li><h6>Window</h6></li>
+								<li><h6>8-Node</h6></li>
+								<li><h6>Steel Column</h6></li>
+								<li><h6>Steel Girder</h6></li>
+								<li><h6>Steel Plate</h6></li>
+								<li><h6>Link Member</h6></li>
+								<li><h6>Rebar Sizes</h6></li>
+								<li><h6>Bricks System</h6></li>
+								<li><h6>Spherical Region</h6></li>
+								<li><h6>8-Node Region</h6></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabModifyHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabModify"
+							aria-expanded="false"
+							aria-controls="tabModify">
+							Modify
+						</button>
+					</h2>
+					<div
+						id="tabModify"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabModifyHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: Modify -->
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabEditHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabEdit"
+							aria-expanded="false"
+							aria-controls="tabEdit">
+							Edit
+						</button>
+					</h2>
+					<div
+						id="tabEdit"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabEditHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: Edit -->
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabToolsHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabTools"
+							aria-expanded="false"
+							aria-controls="tabTools">
+							Tools
+						</button>
+					</h2>
+					<div
+						id="tabTools"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabToolsHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: Tools -->
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabViewHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabView"
+							aria-expanded="false"
+							aria-controls="tabView">
+							View
+						</button>
+					</h2>
+					<div
+						id="tabView"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabViewHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: View -->
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabMaterialsHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabMaterials"
+							aria-expanded="false"
+							aria-controls="tabMaterials">
+							Materials
+						</button>
+					</h2>
+					<div
+						id="tabMaterials"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabMaterialsHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: Materials -->
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabTemplatesHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabTemplates"
+							aria-expanded="false"
+							aria-controls="tabTemplates">
+							Templates
+						</button>
+					</h2>
+					<div
+						id="tabTemplates"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabTemplatesHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: Templates -->
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabAnalysisHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabAnalysis"
+							aria-expanded="false"
+							aria-controls="tabAnalysis">
+							Analysis
+						</button>
+					</h2>
+					<div
+						id="tabAnalysis"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabAnalysisHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: Analysis -->
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="tabFileExchangeHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#tabFileExchange"
+							aria-expanded="false"
+							aria-controls="tabFileExchange">
+							File Exchange
+						</button>
+					</h2>
+					<div
+						id="tabFileExchange"
+						class="accordion-collapse collapse"
+						aria-labelledby="tabFileExchangeHeading"
+						data-bs-parent="#ribbonTabsAccordion">
+						<div class="accordion-body">
+							<!-- Ribbon Tab Content: File Exchange -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end main-content-fixed -->
+		<script src="els-qsg-search.js"></script>
+		<style>
+			.main-content-fixed {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			#site-search-results {
+				max-height: 300px;
+				overflow-y: auto;
+				border-top: none;
+				top: 100%;
+				left: 0;
+			}
+			.site-search-result-item {
+				display: flex;
+				flex-direction: row;
+				align-items: flex-start;
+				gap: 1rem;
+				padding: 0.5rem 1rem;
+			}
+			.site-search-result-title {
+				min-width: 160px;
+				max-width: 220px;
+				white-space: normal;
+				word-break: break-word;
+			}
+			.site-search-result-preview {
+				flex: 1;
+				color: #6c757d;
+				font-size: 0.95em;
+				line-height: 1.3;
+			}
+			#site-search:focus {
+				box-shadow: 0 0 0 2px #0d6efd33;
+			}
+		</style>
 	</body>
 </html>

@@ -11,50 +11,77 @@
 	</head>
 
 	<body>
-		<div class="container mt-3 mb-4">
-			<div class="row justify-content-center">
-				<div class="col-md-8 position-relative">
-					<div class="input-group">
-						<input
-							id="site-search"
-							type="text"
-							class="form-control"
-							placeholder="Search the Quick Start Guide..."
-							aria-label="Site Search"
-							autocomplete="off" />
-						<button
-							class="btn btn-outline-secondary"
-							type="button"
-							id="site-search-btn">
-							Search
-						</button>
+		<!-- Sidebar Toggle Button (fixed, modern style) -->
+		<button
+			id="sidebar-toggle-btn"
+			class="btn btn-outline-dark position-fixed bg-white shadow d-flex align-items-center"
+			style="top: 20px; left: 20px; z-index: 2000; border-radius: 8px"
+			type="button"
+			data-bs-toggle="offcanvas"
+			data-bs-target="#offcanvas-navigation"
+			aria-controls="offcanvas-navigation">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				width="16"
+				height="16"
+				fill="currentColor"
+				class="bi bi-list"
+				viewBox="0 0 16 16"
+				aria-hidden="true"
+				focusable="false">
+				<path
+					fill-rule="evenodd"
+					d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+			</svg>
+			<span
+				class="ms-2 d-none d-sm-inline"
+				style="font-size: 1em; font-weight: 500">
+				Quick Start Guide Navigation
+			</span>
+		</button>
+
+		<!-- Main content wrapper for fixed width and sidebar push -->
+		<div class="main-content-fixed">
+			<div class="container mt-3 mb-4">
+				<div class="row justify-content-center">
+					<div class="col-md-8 position-relative">
+						<div class="input-group">
+							<input
+								id="site-search"
+								type="text"
+								class="form-control"
+								placeholder="Search the Quick Start Guide..."
+								aria-label="Site Search"
+								autocomplete="off" />
+							<button
+								class="btn btn-outline-secondary"
+								type="button"
+								id="site-search-btn">
+								Search
+							</button>
+						</div>
+						<ul
+							id="site-search-results"
+							class="list-group position-absolute w-100"
+							style="z-index: 1000; display: none; top: 100%; left: 0"></ul>
 					</div>
-					<ul
-						id="site-search-results"
-						class="list-group position-absolute w-100"
-						style="z-index: 1000; display: none; top: 100%; left: 0"></ul>
 				</div>
 			</div>
-		</div>
-		<div class="container">
-			<button
-				class="btn btn-outline-dark"
-				type="button"
-				data-bs-toggle="offcanvas"
-				data-bs-target="#offcanvas-navigation"
-				aria-controls="offcanvas-navigation">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					width="16"
-					height="16"
-					fill="currentColor"
-					class="bi bi-list"
-					viewBox="0 0 16 16">
-					<path
-						fill-rule="evenodd"
-						d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-				</svg>
-			</button>
+			<script>
+				// Hide sidebar toggle button when offcanvas is open, show when closed
+				document.addEventListener("DOMContentLoaded", function () {
+					var sidebarBtn = document.getElementById("sidebar-toggle-btn");
+					var offcanvas = document.getElementById("offcanvas-navigation");
+					if (offcanvas && sidebarBtn) {
+						offcanvas.addEventListener("show.bs.offcanvas", function () {
+							sidebarBtn.style.display = "none";
+						});
+						offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+							sidebarBtn.style.display = "";
+						});
+					}
+				});
+			</script>
 			<div class="offcanvas offcanvas-start" id="offcanvas-navigation">
 				<div class="offcanvas-header">
 					<h3 class="offcanvas-title">ELS Quick Start Guide</h3>
@@ -112,6 +139,7 @@
 							</ul>
 							<!--navigation list end-->
 						</div>
+						<!-- end main-content-fixed -->
 						<!-- navbar div end -->
 					</nav>
 				</div>
@@ -124,8 +152,7 @@
 				This guide is meant to walk you through the essential processes to build
 				and analyze a basic model using ELS. Use the links in the sidebar to
 				explore different sections. For more information, visit our
-				<a href="https://www.extremeloading.com/" target="_blank">website</a>
-				.
+				<a href="https://www.extremeloading.com/" target="_blank">website.</a>
 			</p>
 
 			Extreme Loading® for Structures (ELS) software package consists of 3
@@ -287,6 +314,10 @@
 		<script src="els-qsg-search.js"></script>
 
 		<style>
+			.main-content-fixed {
+				max-width: 900px;
+				margin: 0 auto;
+			}
 			#site-search-results {
 				max-height: 300px;
 				overflow-y: auto;

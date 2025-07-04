@@ -1,63 +1,61 @@
 <!-- Force nav link highlight on click even if scroll doesn't move, and animate card -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-	var navLinks = document.querySelectorAll('#scrollspyMenu .nav-link');
-	navLinks.forEach(function(link) {
-		link.addEventListener('click', function(e) {
-			navLinks.forEach(function(l) { l.classList.remove('active'); });
-			this.classList.add('active');
+	document.addEventListener("DOMContentLoaded", function () {
+		var navLinks = document.querySelectorAll("#scrollspyMenu .nav-link");
+		navLinks.forEach(function (link) {
+			link.addEventListener("click", function (e) {
+				navLinks.forEach(function (l) {
+					l.classList.remove("active");
+				});
+				this.classList.add("active");
 
-			// Animate the corresponding card
-			var hash = this.getAttribute('href');
-			if (hash && hash.startsWith('#')) {
-				var section = document.querySelector(hash);
-				if (section) {
-					var card = section.querySelector('.card');
-if (card) {
-	card.classList.add('card-animate-fade');
-	setTimeout(function() {
-		card.classList.remove('card-animate-fade');
-	}, 1500);
-	var scrollContainer = document.querySelector('.col-md-9[tabindex]');
-	if (scrollContainer && section) {
-		e.preventDefault();
-		var offset = 0;
-		var el = section;
-		while (el && el !== scrollContainer) {
-			offset += el.offsetTop;
-			el = el.offsetParent;
-		}
-		offset -= 20;
-		scrollContainer.scrollTo({ top: offset, behavior: 'smooth' });
-	}
-}
+				// Animate the corresponding card
+				var hash = this.getAttribute("href");
+				if (hash && hash.startsWith("#")) {
+					var section = document.querySelector(hash);
+					if (section) {
+						var card = section.querySelector(".card");
+						if (card) {
+							card.classList.add("card-animate-fade");
+							setTimeout(function () {
+								card.classList.remove("card-animate-fade");
+							}, 1500);
+							var scrollContainer = document.querySelector(
+								".col-md-9[tabindex]"
+							);
+							if (scrollContainer && section) {
+								e.preventDefault();
+								var offset = 0;
+								var el = section;
+								while (el && el !== scrollContainer) {
+									offset += el.offsetTop;
+									el = el.offsetParent;
+								}
+								offset -= 20;
+								scrollContainer.scrollTo({ top: offset, behavior: "smooth" });
+							}
+						}
+					}
 				}
-			}
+			});
 		});
 	});
-});
 </script>
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 			rel="stylesheet" />
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-		<link
-			rel="stylesheet"
-			href="styles/styles.css" />
+		<link rel="stylesheet" href="styles/styles.css" />
 		<title>ELS Quick Start Guide</title>
 	</head>
 
 	<body>
-		<div class="container" style="height: 100%;">
-			<div
-				class="offcanvas offcanvas-start"
-				id="offcanvas-navigation">
+		<div class="container" style="height: 100%">
+			<div class="offcanvas offcanvas-start" id="offcanvas-navigation">
 				<div class="offcanvas-header">
 					<h3 class="offcanvas-title">ELS Quick Start Guide</h3>
 					<button
@@ -79,83 +77,43 @@ if (card) {
 
 							<ul class="navbar-nav">
 								<li class="nav-item">
-									<a
-										class="nav-link"
-										href="qsghome.html"
-										>QSG Home</a
-									>
+									<a class="nav-link" href="qsghome.html">QSG Home</a>
 								</li>
 								<li class="nav-item">
-									<a
-										class="nav-link current-link"
-										href="new.html"
-										>What's New in ELS V11</a
-									>
+									<a class="nav-link current-link" href="new.html">
+										What's New in ELS V11
+									</a>
 								</li>
 								<li class="nav-item">
-									<a
-										class="nav-link"
-										href="ui.html"
-										>User Interface</a
-									>
+									<a class="nav-link" href="ui.html">User Interface</a>
 								</li>
 								<li class="nav-item">
-									<a
-										class="nav-link"
-										href="main-process.html"
-										>The Main Process</a
-									>
+									<a class="nav-link" href="main-process.html">
+										The Main Process
+									</a>
 									<ul>
 										<li class="nav-item">
-											<a
-												class="nav-link"
-												href="#"
-												>Modeling</a
-											>
+											<a class="nav-link" href="#">Modeling</a>
 											<ul>
 												<li class="nav-item">
-													<a
-														class="nav-link"
-														href="#"
-														>Step 1</a
-													>
+													<a class="nav-link" href="#">Step 1</a>
 												</li>
 												<li class="nav-item">
-													<a
-														class="nav-link"
-														href="#"
-														>Step 2</a
-													>
+													<a class="nav-link" href="#">Step 2</a>
 												</li>
 												<li class="nav-item">
-													<a
-														class="nav-link"
-														href="#"
-														>Step 3</a
-													>
+													<a class="nav-link" href="#">Step 3</a>
 												</li>
 												<li class="nav-item">
-													<a
-														class="nav-link"
-														href="#"
-														>Step 4</a
-													>
+													<a class="nav-link" href="#">Step 4</a>
 												</li>
 												<li class="nav-item">
-													<a
-														class="nav-link"
-														href="#"
-														>Step 5</a
-													>
+													<a class="nav-link" href="#">Step 5</a>
 												</li>
 											</ul>
 										</li>
 										<li class="nav-item">
-											<a
-												class="nav-link btn-outline-dark"
-												href="#"
-												>Results</a
-											>
+											<a class="nav-link btn-outline-dark" href="#">Results</a>
 										</li>
 									</ul>
 								</li>
@@ -191,278 +149,538 @@ if (card) {
 				</svg>
 				<span
 					class="ms-2 d-none d-sm-inline"
-					style="font-size: 1em; font-weight: 500"
-					>Quick Start Guide Navigation</span
-				>
+					style="font-size: 1em; font-weight: 500">
+					Quick Start Guide Navigation
+				</span>
 			</button>
 			<nav aria-label="breadcrumb">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="qsghome.html">Home</a></li>
-					<li
-						class="breadcrumb-item active"
-						aria-current="page">
+					<li class="breadcrumb-item active" aria-current="page">
 						What's New in V11
 					</li>
 				</ol>
 			</nav>
+
+			<!-- Search Bar -->
+			<div class="row justify-content-center mt-3 mb-4">
+				<div class="col-md-8 position-relative">
+					<div class="input-group">
+						<input
+							id="site-search"
+							type="text"
+							class="form-control"
+							placeholder="Search the Quick Start Guide..."
+							aria-label="Site Search"
+							autocomplete="off" />
+						<button
+							class="btn btn-outline-secondary"
+							type="button"
+							id="site-search-btn">
+							Search
+						</button>
+					</div>
+					<ul
+						id="site-search-results"
+						class="list-group position-absolute w-100"
+						style="z-index: 1000; display: none; top: 100%; left: 0"></ul>
+				</div>
+			</div>
+			<script src="els-qsg-search.js"></script>
 
 			<div class="row">
 				<!-- Sticky Vertical Nav for Scrollspy -->
 				<nav
 					class="col-md-3 d-none d-md-block position-sticky"
 					style="top: 80px; z-index: 2">
-				   <ul class="nav flex-column nav-pills" id="scrollspyMenu">
-					   <li class="nav-item"><a class="nav-link" href="#interface">Interface</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#properties-browser">Properties Browser</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#divide-multiple-planes">Divide with Multiple Planes</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#boundary-conditions">Boundary Conditions</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#append-elements">Append Elements</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#copy-groups">Copy Groups</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#create-link-member">Create Link Member</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#anisotropic-materials">Anisotropic Materials</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#equations">Equations</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#import-materials">Import Materials and Styles</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#replace-interface-id">Replace Interface ID</a></li>
-					   <li class="nav-item"><a class="nav-link" href="#other-utilities">Other Utilities & Features</a></li>
-				   </ul>
+					<ul class="nav flex-column nav-pills" id="scrollspyMenu">
+						<li class="nav-item">
+							<a class="nav-link" href="#interface">Interface</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#properties-browser">
+								Properties Browser
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#divide-multiple-planes">
+								Divide with Multiple Planes
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#boundary-conditions">
+								Boundary Conditions
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#append-elements">Append Elements</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#copy-groups">Copy Groups</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#create-link-member">
+								Create Link Member
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#anisotropic-materials">
+								Anisotropic Materials
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#equations">Equations</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#import-materials">
+								Import Materials and Styles
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#replace-interface-id">
+								Replace Interface ID
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#other-utilities">
+								Other Utilities & Features
+							</a>
+						</li>
+					</ul>
 				</nav>
 				<!-- Main Content with Scrollspy -->
-			   <div class="col-md-9" tabindex="0" style="position: relative; height: 95vh; overflow-y: auto">
-				   <h1 id="top">What's New in V11?</h1>
-				   <p>
-					   ELS has seen a host of major changes in its eleventh iteration, as
-					   well as a multitude of improvements in user experience and
-					   enhancements of existing features. In this section, intended for
-					   users of previous versions of ELS, we list some of the most
-					   significant changes and where to reach them.
-				   </p>
-				   <!-- Interface Section -->
-				   <section id="interface" class="mb-4">
-					   <h2 class="visually-hidden">Interface</h2>
-					   <div class="card col-12">
-						   <img src="images/new-features/ribbon.png" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="A static image of the new ELS Ribbon" />
-						   <div class="card-body">
-							   <h5 class="card-title">Interface</h5>
-							   <p class="card-text">The ELS interface has been completely redesigned to provide a more intuitive and user-friendly experience. The new interface features a modern look and feel, with improved navigation, and modeling and viewing quick access tools.</p>
-							   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#interfaceModal">Learn More</a>
-						   </div>
-					   </div>
-				   </section>
-				   <!-- Properties Browser Section -->
-				   <section id="properties-browser" class="mb-4">
-					   <h2 class="visually-hidden">Properties Browser</h2>
-					   <div class="card" data-nav="#properties-browser">
-						   <img src="images/new-features/line-thickness.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Demo of line thickness and stipple" />
-						   <div class="card-body">
-							   <h5 class="card-title">Properties Browser: New Properties</h5>
-							   <p class="card-text">New properties have been added to the Properties browser for line thickness when a draft, structural object, RFT, or element is selected. Another option for line stipple has been added for drafts.</p>
-							   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#secondModal">Learn More</a>
-						   </div>
-					   </div>
-				   </section>
-				   <!-- Divide with Multiple Planes Section -->
-				   <section id="divide-multiple-planes" class="mb-4">
-					   <h2 class="visually-hidden">Divide with Multiple Planes</h2>
-					   <div class="card" data-nav="#divide-multiple-planes">
-						   <img src="images/new-features/divide-with-multiple-planes/divide-with-multiple-planes.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Demo of dividing a column" />
-						   <div class="card-body">
-							   <h5 class="card-title">Divide with Multiple Planes</h5>
-							   <p class="card-text">Users can now divide a column with multiple planes, allowing for more complex structural modeling.</p>
-							   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#divideModal">Learn More</a>
-						   </div>
-					   </div>
-				   </section>
-				   <!-- Boundary Conditions Section -->
-				   <section id="boundary-conditions" class="mb-4">
-					   <h2 class="visually-hidden">Boundary Conditions</h2>
-					   <div class="card" data-nav="#boundary-conditions">
-						   <img src="images/new-features/boundary-conditions/boundary-conditions-demo.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="A demonstration of assigning boundary conditions to multiple stages" />
-						   <div class="card-body">
-							   <h5 class="card-title">Boundary Conditions Across Stages</h5>
-							   <p class="card-text">Pick the stages you apply boundary conditions to, including all degree of freedom restraint data. Define once, apply to multiple stages.</p>
-							   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#boundaryConditionsModal">Learn More</a>
-						   </div>
-					   </div>
-				   </section>
-				   <!-- Append Elements Section -->
-				   <section id="append-elements" class="mb-4">
-					   <h2 class="visually-hidden">Append Elements</h2>
-					   <div class="card" data-nav="#append-elements">
-						   <img src="images/new-features/append-elements/append-elements-demo.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Demonstration of appending elements feature" />
-						   <div class="card-body">
-							   <h5 class="card-title">Append Elements</h5>
-							   <p class="card-text">New functionality allows appending elements to existing groups, enabling more flexible modeling and modification of existing structures.</p>
-							   <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appendElementsModal">Learn More</a>
-						   </div>
-					   </div>
-				   </section>
-				   <!-- Copy Groups, Create Link Member, Anisotropic Materials: 2-column layout, each card in its own section as direct children -->
-				   <div class="row g-4 align-items-stretch">
-					   <section id="copy-groups" class="col-md-6 mb-4 card-section d-flex flex-column">
-						   <h2 class="visually-hidden">Copy Groups</h2>
-						   <div class="card h-100 d-flex flex-column" data-nav="#copy-groups">
-							   <img src="images/new-features/copy-groups/demo.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Demo of copy groups feature" />
-							   <div class="card-body d-flex flex-column flex-grow-1">
-								   <h5 class="card-title">Streamlined Modeling: Copy Groups</h5>
-								   <p class="card-text">Simply copy groups between Preprocessing actions, boundary conditions, and loading scenarios, eliminating the need to reselect elements in preprocessing groups that apply to the same elements.</p>
-								   <div class="flex-grow-1"></div>
-								   <div style="height: 7.5rem;"></div>
-								   <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#copyGroupsModal">Learn More</a>
-							   </div>
-						   </div>
-					   </section>
-					   <section id="create-link-member" class="col-md-6 mb-4 card-section d-flex flex-column">
-						   <h2 class="visually-hidden">Create Link Member</h2>
-						   <div class="card w-100 mb-3" data-nav="#create-link-member">
-							   <img src="images/new-features/create-link-member/create-link-member.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Create Link Member" />
-							   <div class="card-body d-flex flex-column">
-								   <h5 class="card-title">Create Link Member</h5>
-								   <p class="card-text">Easily create a link member between two selected elements of different components.</p>
-								   <a href="#" class="btn btn-primary align-self-start" data-bs-toggle="modal" data-bs-target="#createLinkMemberModal">Learn More</a>
-							   </div>
-						   </div>
-						   <section id="anisotropic-materials" class="mt-4 card-section d-flex flex-column">
-							   <h2 class="visually-hidden">Anisotropic Materials</h2>
-							   <div class="card w-100" data-nav="#anisotropic-materials">
-								   <img src="images/new-features/anisotropic-materials/anisotropic-materials.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Anisotropic Materials" />
-								   <div class="card-body d-flex flex-column">
-									   <h5 class="card-title">Anisotropic Materials</h5>
-									   <p class="card-text">New preprocessing feature to create anisotropic materials with different material properties in different directions.</p>
-									   <a href="#" class="btn btn-primary align-self-start" data-bs-toggle="modal" data-bs-target="#anisotropicMaterialsModal">Learn More</a>
-								   </div>
-							   </div>
-						   </section>
-					   </section>
-				   </div>
-	   <style>
-		   /* Make section.card-section behave like contents so grid/row works */
-		   section.card-section {
-			   display: contents;
-		   }
-		   /* Uniform card heights for 3-column features row (Equations, Import Materials, Replace Interface ID) */
-		   .row.g-4.align-items-start > section > .card {
-			   height: 100%;
-			   min-height: 440px;
-			   display: flex;
-			   flex-direction: column;
-		   }
-		   .row.g-4.align-items-start > section > .card .card-body {
-			   flex: 1 1 auto;
-			   display: flex;
-			   flex-direction: column;
-		   }
-		   /* Card fade animation */
-		   .card-animate-fade {
-			   animation: cardFadeHighlight 1.5s cubic-bezier(0.4,0,0.2,1);
-			   z-index: 1;
-			   position: relative;
-		   }
-		   @keyframes cardFadeHighlight {
-			   0% {
-				   box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7), 0 0 0 0 rgba(0,0,0,0.05);
-				   background-color: rgba(255, 193, 7, 0.25);
-			   }
-			   40% {
-				   box-shadow: 0 0 0 16px rgba(255, 193, 7, 0.25), 0 2px 12px 0 rgba(0,0,0,0.10);
-				   background-color: rgba(255, 193, 7, 0.32);
-			   }
-			   80% {
-				   box-shadow: 0 0 0 8px rgba(255, 193, 7, 0.10), 0 1px 6px 0 rgba(0,0,0,0.06);
-				   background-color: rgba(255, 193, 7, 0.12);
-			   }
-			   100% {
-				   box-shadow: 0 0 0 0 rgba(255, 193, 7, 0), 0 1px 4px 0 rgba(0,0,0,0.04);
-				   background-color: transparent;
-			   }
-		   }
-	   </style>
-				   <!-- Equations, Import Materials, Replace Interface ID: 3-column row, each card in its own section for scrollspy -->
-				   <div class="row g-4 align-items-start">
-					   <section id="equations" class="col-md-4 mb-4 card-section d-flex flex-column">
-						   <h2 class="visually-hidden">Equations</h2>
-						   <div class="card h-100 d-flex flex-column" data-nav="#equations">
-							   <img src="images/new-features/equations/equations.jpg" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Equations" />
-							   <div class="card-body d-flex flex-column flex-grow-1">
-								   <h5 class="card-title">Equations</h5>
-								   <p class="card-text">Opens content from equations-modal.html</p>
-								   <div class="flex-grow-1"></div>
-								   <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#equationsModal">Learn More</a>
-							   </div>
-						   </div>
-					   </section>
-					   <section id="import-materials" class="col-md-4 mb-4 card-section d-flex flex-column">
-						   <h2 class="visually-hidden">Import Materials and Styles</h2>
-						   <div class="card h-100 d-flex flex-column" data-nav="#import-materials">
-							   <img src="images/new-features/import-materials/import-materials.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Import Materials and Styles" />
-							   <div class="card-body d-flex flex-column flex-grow-1">
-								   <h5 class="card-title">Import Materials and Styles</h5>
-								   <p class="card-text">Opens content from import-materials-and-styles-modal.html</p>
-								   <div class="flex-grow-1"></div>
-								   <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#importMaterialsStylesModal">Learn More</a>
-							   </div>
-						   </div>
-					   </section>
-					   <section id="replace-interface-id" class="col-md-4 mb-4 card-section d-flex flex-column">
-						   <h2 class="visually-hidden">Replace Interface ID</h2>
-						   <div class="card h-100 d-flex flex-column" data-nav="#replace-interface-id">
-							   <img src="images/new-features/replace-interface-id/illustration.gif" class="card-img-top img-fluid img-thumbnail mx-auto d-block" alt="Replace Interface ID" />
-							   <div class="card-body d-flex flex-column flex-grow-1">
-								   <h5 class="card-title">Spring Utilities: Replace Interface ID</h5>
-								   <p class="card-text">Opens content from replace-interface-id-modal.html</p>
-								   <div class="flex-grow-1"></div>
-								   <a href="#" class="btn btn-primary mt-auto w-100" data-bs-toggle="modal" data-bs-target="#replaceInterfaceIdModal">Learn More</a>
-							   </div>
-						   </div>
-					   </section>
-				   </div>
-				   <!-- Other Utilities Section -->
-				   <section id="other-utilities" class="mb-4">
-					   <h2 class="visually-hidden">Other Utilities & Features</h2>
-					   <div class="card">
-						   <div class="card-body">
-							   <h5 class="card-title">Other Utilities & Features</h5>
-							   <ul>
-								   <li><strong>Create Region on Segments:</strong> Opens content from create-region-on-segments-modal.html</li>
-								   <li><strong>Dowel Action:</strong> Opens content from dowel-action-modal.html</li>
-								   <li><strong>Object Local Axes:</strong> Opens content from object-local-axes-modal.html</li>
-								   <li><strong>Replace Spring Material:</strong> Opens content from replace-spring-material-by-location-modal.html</li>
-								   <li><strong>Style Collection Properties:</strong> Opens content from style-collection-properties-modal.html</li>
-								   <li><strong>Sync Forces:</strong> Opens content from sync-forces-modal.html</li>
-								   <li><strong>Velocity Vector Scale:</strong> Opens content from velocity-vector-scale-modal.html</li>
-								   <li><strong>Wall Stirrup Extensions:</strong> Opens content from wall-stirrup-extensions-modal.html</li>
-							   </ul>
-							   <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#otherUtilitiesModal">Learn More</a>
-						   </div>
-					   </div>
-				   </section>
-		<style>
-			.visually-hidden {
-				position: absolute !important;
-				width: 1px !important;
-				height: 1px !important;
-				padding: 0 !important;
-				margin: -1px !important;
-				overflow: hidden !important;
-				clip: rect(0, 0, 0, 0) !important;
-				white-space: nowrap !important;
-				border: 0 !important;
-			}
-			/* For Scrollspy reliability: ensure each section is tall enough */
-			.col-md-9 > section {
-				min-height: 220px;
-				scroll-margin-top: 90px;
-				margin-bottom: 3rem;
-				margin-bottom: 3rem;
-			}
-			.col-md-9 > section:last-of-type {
-				margin-bottom: 0;
-			}
-			/* Make Create Link Member and Equations sections taller for Scrollspy accuracy */
-			#create-link-member,
-			#equations {
-				min-height: 350px;
-			}
-		</style>
+				<div
+					class="col-md-9"
+					tabindex="0"
+					style="position: relative; height: 95vh; overflow-y: auto">
+					<h1 id="top">What's New in V11?</h1>
+					<p>
+						ELS has seen a host of major changes in its eleventh iteration, as
+						well as a multitude of improvements in user experience and
+						enhancements of existing features. In this section, intended for
+						users of previous versions of ELS, we list some of the most
+						significant changes and where to reach them.
+					</p>
+					<!-- Interface Section -->
+					<section id="interface" class="mb-4">
+						<h2 class="visually-hidden">Interface</h2>
+						<div class="card col-12">
+							<img
+								src="images/new-features/ribbon.png"
+								class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+								alt="A static image of the new ELS Ribbon" />
+							<div class="card-body">
+								<h5 class="card-title">Interface</h5>
+								<p class="card-text">
+									The ELS interface has been completely redesigned to provide a
+									more intuitive and user-friendly experience. The new interface
+									features a modern look and feel, with improved navigation, and
+									modeling and viewing quick access tools.
+								</p>
+								<a
+									href="#"
+									class="btn btn-primary"
+									data-bs-toggle="modal"
+									data-bs-target="#interfaceModal">
+									Learn More
+								</a>
+							</div>
+						</div>
+					</section>
+					<!-- Properties Browser Section -->
+					<section id="properties-browser" class="mb-4">
+						<h2 class="visually-hidden">Properties Browser</h2>
+						<div class="card" data-nav="#properties-browser">
+							<img
+								src="images/new-features/line-thickness.gif"
+								class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+								alt="Demo of line thickness and stipple" />
+							<div class="card-body">
+								<h5 class="card-title">Properties Browser: New Properties</h5>
+								<p class="card-text">
+									New properties have been added to the Properties browser for
+									line thickness when a draft, structural object, RFT, or
+									element is selected. Another option for line stipple has been
+									added for drafts.
+								</p>
+								<a
+									href="#"
+									class="btn btn-primary"
+									data-bs-toggle="modal"
+									data-bs-target="#secondModal">
+									Learn More
+								</a>
+							</div>
+						</div>
+					</section>
+					<!-- Divide with Multiple Planes Section -->
+					<section id="divide-multiple-planes" class="mb-4">
+						<h2 class="visually-hidden">Divide with Multiple Planes</h2>
+						<div class="card" data-nav="#divide-multiple-planes">
+							<img
+								src="images/new-features/divide-with-multiple-planes/divide-with-multiple-planes.gif"
+								class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+								alt="Demo of dividing a column" />
+							<div class="card-body">
+								<h5 class="card-title">Divide with Multiple Planes</h5>
+								<p class="card-text">
+									Users can now divide a column with multiple planes, allowing
+									for more complex structural modeling.
+								</p>
+								<a
+									href="#"
+									class="btn btn-primary"
+									data-bs-toggle="modal"
+									data-bs-target="#divideModal">
+									Learn More
+								</a>
+							</div>
+						</div>
+					</section>
+					<!-- Boundary Conditions Section -->
+					<section id="boundary-conditions" class="mb-4">
+						<h2 class="visually-hidden">Boundary Conditions</h2>
+						<div class="card" data-nav="#boundary-conditions">
+							<img
+								src="images/new-features/boundary-conditions/boundary-conditions-demo.gif"
+								class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+								alt="A demonstration of assigning boundary conditions to multiple stages" />
+							<div class="card-body">
+								<h5 class="card-title">Boundary Conditions Across Stages</h5>
+								<p class="card-text">
+									Pick the stages you apply boundary conditions to, including
+									all degree of freedom restraint data. Define once, apply to
+									multiple stages.
+								</p>
+								<a
+									href="#"
+									class="btn btn-primary"
+									data-bs-toggle="modal"
+									data-bs-target="#boundaryConditionsModal">
+									Learn More
+								</a>
+							</div>
+						</div>
+					</section>
+					<!-- Append Elements Section -->
+					<section id="append-elements" class="mb-4">
+						<h2 class="visually-hidden">Append Elements</h2>
+						<div class="card" data-nav="#append-elements">
+							<img
+								src="images/new-features/append-elements/append-elements-demo.gif"
+								class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+								alt="Demonstration of appending elements feature" />
+							<div class="card-body">
+								<h5 class="card-title">Append Elements</h5>
+								<p class="card-text">
+									New functionality allows appending elements to existing
+									groups, enabling more flexible modeling and modification of
+									existing structures.
+								</p>
+								<a
+									href="#"
+									class="btn btn-primary"
+									data-bs-toggle="modal"
+									data-bs-target="#appendElementsModal">
+									Learn More
+								</a>
+							</div>
+						</div>
+					</section>
+					<!-- Copy Groups, Create Link Member, Anisotropic Materials: 2-column layout, each card in its own section as direct children -->
+					<div class="row g-4 align-items-stretch">
+						<section
+							id="copy-groups"
+							class="col-md-6 mb-4 card-section d-flex flex-column">
+							<h2 class="visually-hidden">Copy Groups</h2>
+							<div
+								class="card h-100 d-flex flex-column"
+								data-nav="#copy-groups">
+								<img
+									src="images/new-features/copy-groups/demo.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Demo of copy groups feature" />
+								<div class="card-body d-flex flex-column flex-grow-1">
+									<h5 class="card-title">Streamlined Modeling: Copy Groups</h5>
+									<p class="card-text">
+										Simply copy groups between Preprocessing actions, boundary
+										conditions, and loading scenarios, eliminating the need to
+										reselect elements in preprocessing groups that apply to the
+										same elements.
+									</p>
+									<div class="flex-grow-1"></div>
+									<div style="height: 7.5rem"></div>
+									<a
+										href="#"
+										class="btn btn-primary mt-auto w-100"
+										data-bs-toggle="modal"
+										data-bs-target="#copyGroupsModal">
+										Learn More
+									</a>
+								</div>
+							</div>
+						</section>
+						<section
+							id="create-link-member"
+							class="col-md-6 mb-4 card-section d-flex flex-column">
+							<h2 class="visually-hidden">Create Link Member</h2>
+							<div class="card w-100 mb-3" data-nav="#create-link-member">
+								<img
+									src="images/new-features/create-link-member/create-link-member.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Create Link Member" />
+								<div class="card-body d-flex flex-column">
+									<h5 class="card-title">Create Link Member</h5>
+									<p class="card-text">
+										Easily create a link member between two selected elements of
+										different components.
+									</p>
+									<a
+										href="#"
+										class="btn btn-primary align-self-start"
+										data-bs-toggle="modal"
+										data-bs-target="#createLinkMemberModal">
+										Learn More
+									</a>
+								</div>
+							</div>
+							<section
+								id="anisotropic-materials"
+								class="mt-4 card-section d-flex flex-column">
+								<h2 class="visually-hidden">Anisotropic Materials</h2>
+								<div class="card w-100" data-nav="#anisotropic-materials">
+									<img
+										src="images/new-features/anisotropic-materials/anisotropic-materials.gif"
+										class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+										alt="Anisotropic Materials" />
+									<div class="card-body d-flex flex-column">
+										<h5 class="card-title">Anisotropic Materials</h5>
+										<p class="card-text">
+											New preprocessing feature to create anisotropic materials
+											with different material properties in different
+											directions.
+										</p>
+										<a
+											href="#"
+											class="btn btn-primary align-self-start"
+											data-bs-toggle="modal"
+											data-bs-target="#anisotropicMaterialsModal">
+											Learn More
+										</a>
+									</div>
+								</div>
+							</section>
+						</section>
+					</div>
+					<style>
+						/* Make section.card-section behave like contents so grid/row works */
+						section.card-section {
+							display: contents;
+						}
+						/* Uniform card heights for 3-column features row (Equations, Import Materials, Replace Interface ID) */
+						.row.g-4.align-items-start > section > .card {
+							height: 100%;
+							min-height: 440px;
+							display: flex;
+							flex-direction: column;
+						}
+						.row.g-4.align-items-start > section > .card .card-body {
+							flex: 1 1 auto;
+							display: flex;
+							flex-direction: column;
+						}
+						/* Card fade animation */
+						.card-animate-fade {
+							animation: cardFadeHighlight 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+							z-index: 1;
+							position: relative;
+						}
+						@keyframes cardFadeHighlight {
+							0% {
+								box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7),
+									0 0 0 0 rgba(0, 0, 0, 0.05);
+								background-color: rgba(255, 193, 7, 0.25);
+							}
+							40% {
+								box-shadow: 0 0 0 16px rgba(255, 193, 7, 0.25),
+									0 2px 12px 0 rgba(0, 0, 0, 0.1);
+								background-color: rgba(255, 193, 7, 0.32);
+							}
+							80% {
+								box-shadow: 0 0 0 8px rgba(255, 193, 7, 0.1),
+									0 1px 6px 0 rgba(0, 0, 0, 0.06);
+								background-color: rgba(255, 193, 7, 0.12);
+							}
+							100% {
+								box-shadow: 0 0 0 0 rgba(255, 193, 7, 0),
+									0 1px 4px 0 rgba(0, 0, 0, 0.04);
+								background-color: transparent;
+							}
+						}
+					</style>
+					<!-- Equations, Import Materials, Replace Interface ID: 3-column row, each card in its own section for scrollspy -->
+					<div class="row g-4 align-items-start">
+						<section
+							id="equations"
+							class="col-md-4 mb-4 card-section d-flex flex-column">
+							<h2 class="visually-hidden">Equations</h2>
+							<div class="card h-100 d-flex flex-column" data-nav="#equations">
+								<img
+									src="images/new-features/equations/equations.jpg"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Equations" />
+								<div class="card-body d-flex flex-column flex-grow-1">
+									<h5 class="card-title">Equations</h5>
+									<p class="card-text">
+										Opens content from equations-modal.html
+									</p>
+									<div class="flex-grow-1"></div>
+									<a
+										href="#"
+										class="btn btn-primary mt-auto w-100"
+										data-bs-toggle="modal"
+										data-bs-target="#equationsModal">
+										Learn More
+									</a>
+								</div>
+							</div>
+						</section>
+						<section
+							id="import-materials"
+							class="col-md-4 mb-4 card-section d-flex flex-column">
+							<h2 class="visually-hidden">Import Materials and Styles</h2>
+							<div
+								class="card h-100 d-flex flex-column"
+								data-nav="#import-materials">
+								<img
+									src="images/new-features/import-materials/import-materials.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Import Materials and Styles" />
+								<div class="card-body d-flex flex-column flex-grow-1">
+									<h5 class="card-title">Import Materials and Styles</h5>
+									<p class="card-text">
+										Opens content from import-materials-and-styles-modal.html
+									</p>
+									<div class="flex-grow-1"></div>
+									<a
+										href="#"
+										class="btn btn-primary mt-auto w-100"
+										data-bs-toggle="modal"
+										data-bs-target="#importMaterialsStylesModal">
+										Learn More
+									</a>
+								</div>
+							</div>
+						</section>
+						<section
+							id="replace-interface-id"
+							class="col-md-4 mb-4 card-section d-flex flex-column">
+							<h2 class="visually-hidden">Replace Interface ID</h2>
+							<div
+								class="card h-100 d-flex flex-column"
+								data-nav="#replace-interface-id">
+								<img
+									src="images/new-features/replace-interface-id/illustration.gif"
+									class="card-img-top img-fluid img-thumbnail mx-auto d-block"
+									alt="Replace Interface ID" />
+								<div class="card-body d-flex flex-column flex-grow-1">
+									<h5 class="card-title">
+										Spring Utilities: Replace Interface ID
+									</h5>
+									<p class="card-text">
+										Opens content from replace-interface-id-modal.html
+									</p>
+									<div class="flex-grow-1"></div>
+									<a
+										href="#"
+										class="btn btn-primary mt-auto w-100"
+										data-bs-toggle="modal"
+										data-bs-target="#replaceInterfaceIdModal">
+										Learn More
+									</a>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!-- Other Utilities Section -->
+					<section id="other-utilities" class="mb-4">
+						<h2 class="visually-hidden">Other Utilities & Features</h2>
+						<div class="card">
+							<div class="card-body">
+								<h5 class="card-title">Other Utilities & Features</h5>
+								<ul>
+									<li>
+										<strong>Create Region on Segments:</strong>
+										Opens content from create-region-on-segments-modal.html
+									</li>
+									<li>
+										<strong>Dowel Action:</strong>
+										Opens content from dowel-action-modal.html
+									</li>
+									<li>
+										<strong>Object Local Axes:</strong>
+										Opens content from object-local-axes-modal.html
+									</li>
+									<li>
+										<strong>Replace Spring Material:</strong>
+										Opens content from
+										replace-spring-material-by-location-modal.html
+									</li>
+									<li>
+										<strong>Style Collection Properties:</strong>
+										Opens content from style-collection-properties-modal.html
+									</li>
+									<li>
+										<strong>Sync Forces:</strong>
+										Opens content from sync-forces-modal.html
+									</li>
+									<li>
+										<strong>Velocity Vector Scale:</strong>
+										Opens content from velocity-vector-scale-modal.html
+									</li>
+									<li>
+										<strong>Wall Stirrup Extensions:</strong>
+										Opens content from wall-stirrup-extensions-modal.html
+									</li>
+								</ul>
+								<a
+									href="#"
+									class="btn btn-primary mt-3"
+									data-bs-toggle="modal"
+									data-bs-target="#otherUtilitiesModal">
+									Learn More
+								</a>
+							</div>
+						</div>
+					</section>
+					<style>
+						.visually-hidden {
+							position: absolute !important;
+							width: 1px !important;
+							height: 1px !important;
+							padding: 0 !important;
+							margin: -1px !important;
+							overflow: hidden !important;
+							clip: rect(0, 0, 0, 0) !important;
+							white-space: nowrap !important;
+							border: 0 !important;
+						}
+						/* For Scrollspy reliability: ensure each section is tall enough */
+						.col-md-9 > section {
+							min-height: 220px;
+							scroll-margin-top: 90px;
+							margin-bottom: 3rem;
+							margin-bottom: 3rem;
+						}
+						.col-md-9 > section:last-of-type {
+							margin-bottom: 0;
+						}
+						/* Make Create Link Member and Equations sections taller for Scrollspy accuracy */
+						#create-link-member,
+						#equations {
+							min-height: 350px;
+						}
+					</style>
 
 					<!-- Modals Section -->
 					<!-- Interface Modal -->
@@ -475,9 +693,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h3
-										class="modal-title"
-										id="interfaceModalLabel">
+									<h3 class="modal-title" id="interfaceModalLabel">
 										Interface Overhaul
 									</h3>
 									<button
@@ -511,9 +727,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h3
-										class="modal-title"
-										id="secondModalLabel">
+									<h3 class="modal-title" id="secondModalLabel">
 										Properties Browser: New Properties
 									</h3>
 									<button
@@ -547,9 +761,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h3
-										class="modal-title"
-										id="divideModalLabel">
+									<h3 class="modal-title" id="divideModalLabel">
 										Divide with Multiple Planes
 									</h3>
 									<button
@@ -583,9 +795,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h3
-										class="modal-title"
-										id="copyGroupsModalLabel">
+									<h3 class="modal-title" id="copyGroupsModalLabel">
 										Copy Groups
 									</h3>
 									<button
@@ -619,9 +829,7 @@ if (card) {
 						<div class="modal-dialog modal-xl">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="boundaryConditionsModalLabel">
+									<h5 class="modal-title" id="boundaryConditionsModalLabel">
 										Boundary Conditions Across Stages
 									</h5>
 									<button
@@ -647,9 +855,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="appendElementsModalLabel">
+									<h5 class="modal-title" id="appendElementsModalLabel">
 										Append Elements
 									</h5>
 									<button
@@ -675,9 +881,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="anisotropicMaterialsModalLabel">
+									<h5 class="modal-title" id="anisotropicMaterialsModalLabel">
 										Anisotropic Materials
 									</h5>
 									<button
@@ -703,9 +907,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="createLinkMemberModalLabel">
+									<h5 class="modal-title" id="createLinkMemberModalLabel">
 										Create Link Member
 									</h5>
 									<button
@@ -731,9 +933,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="createRegionOnSegmentsModalLabel">
+									<h5 class="modal-title" id="createRegionOnSegmentsModalLabel">
 										Create Region on Segments
 									</h5>
 									<button
@@ -759,9 +959,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="customGroupsModalLabel">
+									<h5 class="modal-title" id="customGroupsModalLabel">
 										Custom Groups
 									</h5>
 									<button
@@ -787,9 +985,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="dowelActionModalLabel">
+									<h5 class="modal-title" id="dowelActionModalLabel">
 										Dowel Action
 									</h5>
 									<button
@@ -815,9 +1011,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="equationsModalLabel">
+									<h5 class="modal-title" id="equationsModalLabel">
 										Equations
 									</h5>
 									<button
@@ -843,9 +1037,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="importMaterialsStylesModalLabel">
+									<h5 class="modal-title" id="importMaterialsStylesModalLabel">
 										Import Materials and Styles
 									</h5>
 									<button
@@ -871,9 +1063,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="objectLocalAxesModalLabel">
+									<h5 class="modal-title" id="objectLocalAxesModalLabel">
 										Object Local Axes
 									</h5>
 									<button
@@ -899,9 +1089,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="replaceInterfaceIdModalLabel">
+									<h5 class="modal-title" id="replaceInterfaceIdModalLabel">
 										Replace Interface ID
 									</h5>
 									<button
@@ -927,9 +1115,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="replaceSpringMaterialModalLabel">
+									<h5 class="modal-title" id="replaceSpringMaterialModalLabel">
 										Replace Spring Material
 									</h5>
 									<button
@@ -983,9 +1169,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="syncForcesModalLabel">
+									<h5 class="modal-title" id="syncForcesModalLabel">
 										Sync Forces
 									</h5>
 									<button
@@ -1011,9 +1195,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="velocityVectorScaleModalLabel">
+									<h5 class="modal-title" id="velocityVectorScaleModalLabel">
 										Velocity Vector Scale
 									</h5>
 									<button
@@ -1039,9 +1221,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="wallStirrupExtensionsModalLabel">
+									<h5 class="modal-title" id="wallStirrupExtensionsModalLabel">
 										Wall Stirrup Extensions
 									</h5>
 									<button
@@ -1067,9 +1247,7 @@ if (card) {
 						<div class="modal-dialog modal-lg">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h5
-										class="modal-title"
-										id="otherUtilitiesModalLabel">
+									<h5 class="modal-title" id="otherUtilitiesModalLabel">
 										Other Utilities & Features
 									</h5>
 									<button

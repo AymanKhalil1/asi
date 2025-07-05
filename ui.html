@@ -160,9 +160,13 @@
 				components of the ELS Modeler interface are:
 			</p>
 			<ul>
-				<li>The Ribbon</li>
-				<li>The Quick Access Toolbar</li>
-				<li>The Browser Panel</li>
+				<li><a href="#tabHomeHeading">The Ribbon</a></li>
+				<li>
+					<a href="modals/interface-modal.html#qat-header" target="_blank">
+						The Quick Access Toolbar
+					</a>
+				</li>
+				<li><a href="#browsersAccordion">The Browser Panel</a></li>
 				<li>The Modeling window</li>
 			</ul>
 			<h2>The Ribbon</h2>
@@ -268,40 +272,66 @@
 									<h6>Properties</h6>
 									Opens the Structure Properties dialog box.
 								</li>
+
 								<li>
-									<h6>Point</h6>
-									Draws a single point which can be used as a reference, or a
-									start or end position specifier for other objects.
+									Draft Commands:
+									<ul>
+										<li>
+											<h6>Point</h6>
+										</li>
+										<li>
+											<h6>Line</h6>
+										</li>
+										<li><h6>Rectangle</h6></li>
+										<li><h6>Circle</h6></li>
+										<li><h6>Ellipse</h6></li>
+										<li><h6>Polygon</h6></li>
+										<li><h6>Polyline</h6></li>
+										<li><h6>Arc</h6></li>
+										<li><h6>B-Spline Curve</h6></li>
+										<li><h6>Hybrid</h6></li>
+										<li><h6>Text</h6></li>
+									</ul>
 								</li>
-								<li><h6>Line</h6></li>
-								<li><h6>Rectangle</h6></li>
-								<li><h6>Circle</h6></li>
-								<li><h6>Ellipse</h6></li>
-								<li><h6>Polygon</h6></li>
-								<li><h6>Polyline</h6></li>
-								<li><h6>Arc</h6></li>
-								<li><h6>B-Spline Curve</h6></li>
-								<li><h6>Hybrid</h6></li>
+
 								<li><h6>Axes</h6></li>
-								<li><h6>Text</h6></li>
-								<li><h6>Drafting Settings</h6></li>
+
+								<li>
+									<h6>Drafting Settings</h6>
+									Opens the Drafting Settings dialog box which is used for
+									configuring the drafting environment, specifically customizing
+									the grid and the snapping options.
+								</li>
 								<li><h6>Dimensions</h6></li>
 								<li><h6>Measurement</h6></li>
 								<li><h6>Protractor</h6></li>
-								<li><h6>Column</h6></li>
-								<li><h6>Circular Column</h6></li>
-								<li><h6>Girder</h6></li>
-								<li><h6>Slab</h6></li>
-								<li><h6>RFT</h6></li>
-								<li><h6>Wall</h6></li>
-								<li><h6>Window</h6></li>
-								<li><h6>8-Node</h6></li>
-								<li><h6>Steel Column</h6></li>
-								<li><h6>Steel Girder</h6></li>
-								<li><h6>Steel Plate</h6></li>
-								<li><h6>Link Member</h6></li>
-								<li><h6>Rebar Sizes</h6></li>
-								<li><h6>Bricks System</h6></li>
+
+								<li>
+									Structural Commands:
+									<ul>
+										<li><h6>Column</h6></li>
+										<li><h6>Circular Column</h6></li>
+										<li><h6>Girder</h6></li>
+										<li><h6>Slab</h6></li>
+										<li><h6>RFT</h6></li>
+										<li><h6>Wall</h6></li>
+										<li><h6>Window</h6></li>
+										<li><h6>8-Node</h6></li>
+										<li><h6>Steel Column</h6></li>
+										<li><h6>Steel Girder</h6></li>
+										<li><h6>Steel Plate</h6></li>
+										<li><h6>Link Member</h6></li>
+									</ul>
+								</li>
+								<li>
+									<h6>Rebar Sizes</h6>
+									allows the user to view and define the sizes of RFT bars,bolts
+									and screws for use in modeling.
+								</li>
+								<li>
+									<h6>Bricks System</h6>
+									allows the user to view and define brick systems.
+								</li>
 								<li><h6>Spherical Region</h6></li>
 								<li><h6>8-Node Region</h6></li>
 							</ul>
@@ -326,7 +356,107 @@
 						aria-labelledby="tabModifyHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: Modify -->
+							<p>The Modify tab commands are:</p>
+							<ul>
+								<li><h6>Copy</h6></li>
+								<li>
+									<h6>Copy Format Settings</h6>
+									enables the user to modify the properties of the target object
+									to match the properties of another object according to the
+									ticked properties in the copy format dialog (Style, material,
+									RFT extension,...etc.).
+								</li>
+								<li><h6>Mirror</h6></li>
+								<li><h6>Shift</h6></li>
+								<li><h6>Offset</h6></li>
+								<li><h6>Scale</h6></li>
+								<li><h6>Scale 3D</h6></li>
+								<li><h6>Trim</h6></li>
+								<li><h6>Extend</h6></li>
+								<li><h6>Group Trim/Extend</h6></li>
+								<li><h6>Explode</h6></li>
+								<li><h6>Array</h6></li>
+								<li><h6>Extrusion</h6></li>
+								<li><h6>Revolution</h6></li>
+								<li><h6>Align Edges</h6></li>
+								<li><h6>Divide</h6></li>
+								<li>
+									<h6>Intersect</h6>
+									a tool to remove the overlap between structural objects by
+									specifying Cutter objects and Objects to be cut.
+								</li>
+								<li>
+									<h6>Crack</h6>
+									opens cracks in structural objects with a user specified
+									depth. The cracks are defined using drafts and the object with
+									the crack has to be a structural object.
+								</li>
+								<li>
+									<h6>Create Hole</h6>
+									opens holes in structural objects with a user specified depth.
+									The holes are defined using closed drafts.
+								</li>
+								<li><h6>Chamfer</h6></li>
+								<li><h6>Fillet</h6></li>
+								<li>
+									<h6>Follow Me</h6>
+									converts a 2D draft into a 3D element (8-node) by extruding it
+									along a path [Unlike Extrusion, the path can be completely as
+									per the user preference. It can be a straight line, a series
+									of straight lines, a curve, a series of curves or a
+									combination of them all]. (For drafts only)
+								</li>
+								<li><h6>Create Hinge</h6></li>
+								<li>
+									<h6>Create Nails at Contact Surface</h6>
+									allows the user to quickly generate nails at interfaces
+									between chosen groups of structural components. The generated
+									nails are generated as drafts which can be later converted to
+									bolts or nails of any chosen material and dimensions.
+								</li>
+								<li>
+									<h6>Create Region at Contact Surface</h6>
+									creates an 8-node region at the contact surface between two
+									structural objects.
+								</li>
+								<li>
+									<h6>Align</h6>
+									Adjusts the position of the selected objects relative to one
+									another based on one of the following 9 criteria: minimum x,
+									maximum x, center x, minimum y, maximum y, center y, minimum
+									z, maximum z, center z.
+								</li>
+								<li>
+									<h6>Extract Elements</h6>
+									Separates the elements from their original structural object
+									and converts them into 8-node elements. If the meshing of the
+									object is an automatic mesh, it will be converted to a custom
+									mesh.
+								</li>
+								<li>
+									<h6>Merge Element Lists</h6>
+									a tool to combine(merge) a number of elements of a structural
+									object in one element in cases where mesh-adjustment is
+									needed.
+								</li>
+								<li>
+									<h6>Re-mesh Selected Elements</h6>
+									a tool to re-divide an already existing mesh whether through
+									intensifying the mesh density at specific locations or
+									changing the mesh type.
+								</li>
+								<li>
+									<h6>Shift Element Corners</h6>
+									enables the user to push or pull elements or objects corners a
+									specific distance.
+								</li>
+								<li>
+									<h6>Append to Component</h6>
+									a tool to merge the elements of a structural object to be part
+									of another structural object taking the type of the "appended
+									to" object but with a custom mesh.
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -348,7 +478,26 @@
 						aria-labelledby="tabEditHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: Edit -->
+							<p>The Edit tab commands are:</p>
+							<ul>
+								<li><h6>Undo</h6></li>
+								<li><h6>Redo</h6></li>
+								<li><h6>Copy</h6></li>
+								<li><h6>Paste</h6></li>
+								<li><h6>Delete</h6></li>
+								<li><h6>Delete Selected Elements</h6></li>
+								<li><h6>Select All</h6></li>
+								<li><h6>Cancel Selection</h6></li>
+								<li>
+									<h6>Select Elements by Name</h6>
+									enables the user to select specific objects using their names.
+								</li>
+								<li>
+									<h6>Select Elements by Criteria</h6>
+									a tool to infinitesimally filter elements selection according
+									to volume/aspect ratio. (For structural components only)
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -370,7 +519,89 @@
 						aria-labelledby="tabToolsHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: Tools -->
+							<p>The Tools tab commands are:</p>
+							<ul>
+								<li>
+									<h6>Check Integrity</h6>
+									a tool to detect overlaps between structure objects that might
+									affect the solution outputs and remove those overlaps by
+									specifying cutter objects and the objects to be Cut.
+								</li>
+								<li>
+									<h6>Mesh Calculator</h6>
+									displays all mesh related info for all structural objects in
+									the model.
+								</li>
+								<li>
+									<h6>Blocks</h6>
+									a tool to group several objects together to act as if one
+									object. Blocks allow object groups to be duplicated within the
+									same project or across multiple projects by
+									importing/exporting them
+								</li>
+								<li>
+									<h6>Min/Max Elements Volume</h6>
+									adjusts the element-volume maximum and minimum bounds.
+								</li>
+								<li>
+									<h6>Motion Path</h6>
+									a tool to record AVI videos to present the different parts and
+									angles of the structure on ELS.
+								</li>
+								<li>
+									<h6>Attach Files</h6>
+									enables the user to make attachments to an ordinary ELS file.
+									This command is useful when the user needs to link
+									project-related papers or presentations to the current ELS
+									file.
+								</li>
+								<li>
+									<h6>Objects Attachment</h6>
+									used to attach two objects together.
+								</li>
+								<li><h6>Replace Assigned Material/Style</h6></li>
+								<li>
+									<h6>Purge Unused Assignments</h6>
+									removes unused assignments to eliminate the unneeded clutter.
+								</li>
+								<li>
+									<h6>Filtration</h6>
+									aids the user to filter the objects based on a set of
+									filtration criteria.
+								</li>
+								<li>
+									<h6>Reports</h6>
+									enables the user to create detailed report(s) of their current
+									project on ELS presenting the model itself as snapshots,
+									materials, RFT, load assignments,lumped masses,....etc. The
+									reports generated are in pdf format and can be totally
+									customized as per the user's preferences.
+								</li>
+								<li>
+									<h6>Units</h6>
+									specifies the units used in the model and correspondingly the
+									results.
+								</li>
+								<li>
+									<h6>Light Settings</h6>
+									adjusts the displayed light settings in the modeling window
+									along with setting the virtual location of the light source.
+								</li>
+								<li>
+									<h6>Command Line Settings</h6>
+									displays the commands shortcuts and enables the user to edit
+									or create new shortcuts to run certain commands which rapid up
+									the modelling process.
+								</li>
+								<li>
+									<h6>Preferences</h6>
+									enables the user to adjust the main features affecting his/her
+									experience on dealing with of ELS's interface including
+									General, Wall, General Steel Section, RFT, Slab, Implicit
+									Steel Plate, Link, 8-Node, Window, Girder, Column & Circular
+									Column preferences.
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -392,7 +623,84 @@
 						aria-labelledby="tabViewHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: View -->
+							<p>The View tab commands are:</p>
+							<ul>
+								<li><h6>Ruler</h6></li>
+								<li><h6>Global Axes</h6></li>
+								<li><h6>Grid</h6></li>
+								<li>
+									<h6>Snap</h6>
+									allows the mouse pointer to stick to specific points in the
+									modeling window to perform the modeling process with the
+									maximum possible ease.
+								</li>
+								<li><h6>Pan</h6></li>
+								<li>
+									<h6>Refresh</h6>
+									reloads/updates the GUI with any changes that may have lagged
+									due to memory insufficiency.
+								</li>
+								<li>
+									<h6>3D View Commands</h6>
+									freely view the model from all directions and perspectives to
+									guarantee the maximum possible model control. The available
+									options are: Isometric, Front (positive Y-axis), Back
+									(negative Y-axis), Back (negative Y-axis), Left (+ve X-axis),
+									Right (-ve X-axis), Bottom (positive Z-axis), Top (negative
+									Z-axis)
+								</li>
+								<li>
+									<h6>Zoom Commands</h6>
+									Control the magnification of the model. The available options
+									are: Zoom In, Zoom Out, Dynamic (zooms in when you drag the
+									model upwards and zooms out when you drag the model
+									downwards), Extents (zooms in to fit the whole model in the
+									modeling window), Selected (zooms in to fit the selected
+									objects in the modeling window).
+								</li>
+								<li>
+									<h6>Rotate Commands</h6>
+									Rotate around X, Y, Z axes or around the screen X,Y, or Z
+									axes, or Arc Ball Rotate.
+								</li>
+
+								<li><h6>Show Frame</h6></li>
+								<li><h6>Show Mesh</h6></li>
+								<li><h6>Show RFT</h6></li>
+								<li><h6>Show Steel Section</h6></li>
+								<li><h6>Solid/Wireframe</h6></li>
+								<li><h6>Shrink Elements</h6></li>
+								<li>
+									<h6>Clipping Commands</h6>
+									Front, Back, Left, Right, Top, Bottom, Volume, Flip Clippiing
+									Direction, Remove Clipping
+								</li>
+								<li><h6>Clip View Settings</h6></li>
+								<li><h6>Activate Walkthrough Mode</h6></li>
+								<li><h6>Walkthrough Settings</h6></li>
+								<li><h6>Status Bar</h6></li>
+								<li><h6>Browser</h6></li>
+								<li><h6>Command Line</h6></li>
+								<li>
+									<h6>Window Commands</h6>
+									New Window, Cascade Windows, Tile Horizontally, Tile
+									Vertically, Switch Active Window
+								</li>
+								<li>
+									<h6>Help</h6>
+									<a
+										href="https://portal.appliedscienceint.com/ExData/modeler-help/">
+										opens ELS's online documentation
+									</a>
+								</li>
+								<li><h6>Samples and Tutorials</h6></li>
+								<li>
+									<h6>About</h6>
+									displays information about the currently installed version of
+									ELS, copyright information, and the date of the expiry of the
+									user's license.
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -414,7 +722,24 @@
 						aria-labelledby="tabMaterialsHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: Materials -->
+							<p>The Materials tab commands are:</p>
+							<ul>
+								<li>
+									<h6>Material Types</h6>
+									a list that displays the materials defined in the project.
+								</li>
+								<li>
+									<h6>Interface Materials</h6>
+									enables the user to view and define interface ID's, assign
+									interface materials to defined ID's and show the range
+									assignment made after component exploding.
+								</li>
+								<li>
+									<h6>Material Quantities</h6>
+									displays each object's material volumetric quantities along
+									with the total material quantities used in the project.
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -436,7 +761,52 @@
 						aria-labelledby="tabTemplatesHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: Templates -->
+							<p>The options available for modeling are:</p>
+							<ul>
+								<li>
+									<h6>Multi-Story Structures</h6>
+									<ul>
+										<li>
+											Flat Slab
+											<ul>
+												<li>Flat Slab without Marginal Beams</li>
+												<li>Flat Slab with Marginal Beams</li>
+											</ul>
+										</li>
+										<li>Solid Slab</li>
+									</ul>
+								</li>
+
+								<li>
+									<h6>Trusses</h6>
+									<ul>
+										<li>Sloped Truss</li>
+										<li>Vertical Truss</li>
+										<li>Pratt Truss</li>
+										<li>Tower</li>
+									</ul>
+								</li>
+
+								<li>
+									<h6>Frames</h6>
+									<ul>
+										<li>2D Frame</li>
+									</ul>
+								</li>
+								<li>
+									<h6>Shells</h6>
+									<ul>
+										<li>Dome</li>
+										<li>Multi-bay Cylindrical Shells</li>
+									</ul>
+								</li>
+								<li><h6>Bearing Wall</h6></li>
+								<li><h6>End Plate Connection</h6></li>
+								<li><h6>Segmental Bridge</h6></li>
+								<li><h6>Hollow Core Slab</h6></li>
+								<li><h6>Stairs</h6></li>
+								<li><h6>Corrugated Sheet</h6></li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -458,7 +828,134 @@
 						aria-labelledby="tabAnalysisHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: Analysis -->
+							<p>The Analysis tab commands are:</p>
+							<ul>
+								<li>
+									<h6>Analysis Settings</h6>
+									enables the user to edit the general settings for maximum
+									output customization. It also allows the user to enables the
+									user to edit the restrains of the degrees of freedom and the
+									gravity options that are to be applied to the whole structure.
+								</li>
+								<li>
+									<h6>Loading Scenario</h6>
+									enables the user to add/remove loading stages and edit them.
+								</li>
+								<li>
+									<h6>Output Files Options</h6>
+									Specifies the types of data calculated by the solver and
+									enabled for viewing in the Viewer.
+								</li>
+								<li><h6>Contact Options</h6></li>
+								<li>
+									<h6>Lumped Mass</h6>
+									displays and creates lumped mass out of the selected elements
+									or region(s).
+								</li>
+								<li>
+									<h6>Lumped Damping</h6>
+									specifies the damping factor (coefficient) of the selected
+									elements.
+								</li>
+								<li>
+									<h6>Rigid Body</h6>
+									displays and creates rigid bodies out of adjacent elements or
+									out of a region.
+								</li>
+								<li>
+									<h6>Element Springs</h6>
+									displays and adjusts the number multiplied to the normal
+									number of springs on each face.
+								</li>
+								<li>
+									<h6>Replace Element Material</h6>
+									grants the user the ability to customize element materials.
+									The enhanced Elements Material Properties editor allows the
+									user to control the choice of material for different element
+									groups.
+								</li>
+								<li>
+									<h6>Replace Spring Material</h6>
+									grants the user the ability to customize a spring group's
+									material.
+								</li>
+								<li>
+									<h6>Anisotropic Materials</h6>
+									allows the user to change the material for a group of elements
+									in each local direction. This is useful for anisotropic
+									materials such as wood, which may have different properties in
+									different directions.
+								</li>
+								<li>
+									<h6>Construct Scenario</h6>
+									allows the user to designate elements for construction during
+									any point in the simulation timeline.
+								</li>
+								<li>
+									<h6>Demolish Scenario</h6>
+									allows the user to designate elements for demolition during
+									any point in the simulation timeline.
+								</li>
+								<li>
+									<h6>Replace Interface ID</h6>
+									allows the user to switch the assigned interface ID for a
+									group of elements at analysis time.
+								</li>
+								<li>
+									<h6>Spring Controller</h6>
+									enables the user to view the spring types in the current model
+									and adjust their action (activate, change material,
+									remove......etc.).
+								</li>
+								<li>
+									<h6>Vehicle Manager</h6>
+									used to assign dynamic vehicle loads to the model.
+								</li>
+								<li>
+									<h6>Elements Data Query</h6>
+									enables the user to view the data assigned to the selected
+									element.
+								</li>
+								<li><h6>Physical Data Conflict</h6></li>
+								<li>
+									<h6>Rigid Body Conflict</h6>
+									highlights groups containing common elements that are assigned
+									to rigid bodies as well as boundary conditions, elastic
+									boundary conditions, initial velocity, initial acceleration,
+									static displacement load, or dynamic displacement load. ELS
+									would not typically allow for such a conflict to exist if
+									elements are chosen directly. However, if elements are chosen
+									using 8-Node regions, these conflicts can arise because the
+									assignment of rigid bodies to elements within a region is
+									deferred to the analysis stage.
+								</li>
+								<li>
+									<h6>Run Solver</h6>
+									runs the analysis (solves the structural analysis problem).
+								</li>
+								<li>
+									<h6>Resume Backup Solver</h6>
+									allows the user to display the backups specified through the
+									results viewer of the current project.
+								</li>
+								<li>
+									<h6>Stop Solver</h6>
+									allows the user to stop the solver before the analysis ends.
+								</li>
+								<li>
+									<h6>Iterative Solver Settings</h6>
+									allows the user to control and edit the iterative solver
+									settings.
+								</li>
+								<li><h6>Open ELS Viewer</h6></li>
+								<li><h6>Explore Output Folder</h6></li>
+								<li><h6>Delete Output</h6></li>
+								<li>
+									<h6>Separation Groups</h6>
+									allows the user to view the groups separated in ELS's results
+									viewer after running the analysis.
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
@@ -480,11 +977,237 @@
 						aria-labelledby="tabFileExchangeHeading"
 						data-bs-parent="#ribbonTabsAccordion">
 						<div class="accordion-body">
-							<!-- Ribbon Tab Content: File Exchange -->
+							<p>The File Exchange tab commands are:</p>
+							<ul>
+								<li><h6>Import XPR</h6></li>
+								<li><h6>Import OBJ</h6></li>
+								<li><h6>Import STL</h6></li>
+								<li><h6>Import DXF</h6></li>
+								<li><h6>Import ELSR</h6></li>
+								<li><h6>Import SELS</h6></li>
+								<li><h6>Export Drafts to Viewer</h6></li>
+								<li><h6>Capture Picture</h6></li>
+								<li><h6>Export XPR</h6></li>
+								<li><h6>Export OBJ</h6></li>
+								<li><h6>Export STL</h6></li>
+								<li><h6>Export DXF</h6></li>
+								<li><h6>Export SELS</h6></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!-- end Ribbon Tabs Accordion -->
+			<!-- Browsers Accordion -->
+			<h2>Browsers</h2>
+			<div class="accordion my-4" id="browsersAccordion">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="browserStructureHeading">
+						<button
+							class="accordion-button"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#browserStructure"
+							aria-expanded="true"
+							aria-controls="browserStructure">
+							Structure
+						</button>
+					</h2>
+					<div
+						id="browserStructure"
+						class="accordion-collapse collapse show"
+						aria-labelledby="browserStructureHeading"
+						data-bs-parent="#browsersAccordion">
+						<div class="accordion-body">
+							<h6>Project Description</h6>
+							<p>
+								The
+								<b><i>Project Description</i></b>
+								tab enables the user to edit the project's general properties.
+							</p>
+							<h6>Mesh Calculator</h6>
+							<p>
+								The
+								<b><i>Mesh Calculator</i></b>
+								dialog aims at displaying the mesh-related info.
+							</p>
+							<h6>Material Quantities</h6>
+							<p>
+								The
+								<b><i>Material Quantities</i></b>
+								form displays each object's material volumetric quantities along
+								with the total material quantities used in the project.
+							</p>
+							<h6>Level Details</h6>
+							<p>
+								The
+								<b><i>Level Details</i></b>
+								tab enables the user to activate/deactivate layers, add, delete
+								and set levels active.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="browserStylesHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#browserStyles"
+							aria-expanded="false"
+							aria-controls="browserStyles">
+							Styles
+						</button>
+					</h2>
+					<div
+						id="browserStyles"
+						class="accordion-collapse collapse"
+						aria-labelledby="browserStylesHeading"
+						data-bs-parent="#browsersAccordion">
+						<div class="accordion-body">
+							<h6>Style Generator</h6>
+							<p>
+								The
+								<b><i>Style Generator</i></b>
+								dialog aims at displaying the available styles in each category
+								(Columns, girders, etc.).
+							</p>
+							<h6>Style Components</h6>
+							<p>
+								The
+								<b><i>Style Components</i></b>
+								dialog aims at displaying each style component (Geometry, RFT &
+								Steel Section) in detail for each structural component.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="browserPreprocessingHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#browserPreprocessing"
+							aria-expanded="false"
+							aria-controls="browserPreprocessing">
+							Preprocessing
+						</button>
+					</h2>
+					<div
+						id="browserPreprocessing"
+						class="accordion-collapse collapse"
+						aria-labelledby="browserPreprocessingHeading"
+						data-bs-parent="#browsersAccordion">
+						<div class="accordion-body">
+							Contains the preprocessing actions that are previously mentioned
+							in the Analysis tab of the ribbon.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="browserActivePlaneHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#browserActivePlane"
+							aria-expanded="false"
+							aria-controls="browserActivePlane">
+							Active Plane
+						</button>
+					</h2>
+					<div
+						id="browserActivePlane"
+						class="accordion-collapse collapse"
+						aria-labelledby="browserActivePlaneHeading"
+						data-bs-parent="#browsersAccordion">
+						<div class="accordion-body">
+							It's where you can control planes by creating new ones, editing,
+							deleting or setting a plane as the active plane. The Active Plane
+							is where the grid appears and where you can snap to draw any
+							object in the required direction.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="browserScenesHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#browserScenes"
+							aria-expanded="false"
+							aria-controls="browserScenes">
+							Scenes
+						</button>
+					</h2>
+					<div
+						id="browserScenes"
+						class="accordion-collapse collapse"
+						aria-labelledby="browserScenesHeading"
+						data-bs-parent="#browsersAccordion">
+						<div class="accordion-body">
+							It's your shortest path to save different scenes of your model and
+							freely move between those scenes. Scenes are handy in cases of
+							multiple engineers working on the same project to show specific
+							scenes of the model.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="browserPropertiesHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#browserProperties"
+							aria-expanded="false"
+							aria-controls="browserProperties">
+							Properties
+						</button>
+					</h2>
+					<div
+						id="browserProperties"
+						class="accordion-collapse collapse"
+						aria-labelledby="browserPropertiesHeading"
+						data-bs-parent="#browsersAccordion">
+						<div class="accordion-body">
+							displays the main categories of properties defined for each
+							structural object. These categories include general and geometric
+							properties of the objects, currently assigned style, and mesh
+							specifications. You can change all editable properties through the
+							Properties browser. NB: if multiple objects are selected, only the
+							common properties appear.
+						</div>
+					</div>
+				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="browserMaterialTypesHeading">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#browserMaterialTypes"
+							aria-expanded="false"
+							aria-controls="browserMaterialTypes">
+							Material Types
+						</button>
+					</h2>
+					<div
+						id="browserMaterialTypes"
+						class="accordion-collapse collapse"
+						aria-labelledby="browserMaterialTypesHeading"
+						data-bs-parent="#browsersAccordion">
+						<div class="accordion-body">
+							is a platform to browse all the available materials in the current
+							project and edit them if needed.
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end Browsers Accordion -->
 		</div>
 		<!-- end main-content-fixed -->
 		<script src="els-qsg-search.js"></script>
